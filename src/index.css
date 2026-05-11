@@ -102,20 +102,165 @@ body{
 
 
 /**ENDING SCREEN STUFF**/
+.opening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.welcome-content {
+    text-align: center;
+    width: 100%;
+}
+.welcome-content h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    font-family: outfit;
+    font-weight: 800;
+}
+.welcome-subtitle {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-family: rubik;
+}
+.question-selector {
+    margin-bottom: 40px;
+}
+.question-selector label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: outfit;
+}
+.selector-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+.range-input {
+    flex: 1;
+    max-width: 250px;
+    height: 6px;
+    border-radius: 5px;
+    background: var(--surface2);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+.range-input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+.question-count {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 60px;
+    color: var(--accent);
+    font-family: outfit;
+}
+.start-btn {
+    padding: 16px 50px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: outfit;
+}
+.start-btn:hover {
+    background: var(--accent2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(108, 99, 255, 0.4);
+}
+.start-btn:active {
+    transform: translateY(-1px);
+}
+
 .screen{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+.screen h2:first-of-type {
+    font-size: 2.5rem;
+    font-family: outfit;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.screen h2:last-of-type {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: outfit;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.result-percentage {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(108, 99, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    font-family: outfit;
+}
+.screen .quiz-stats {
+    font-size: 1rem;
+    color: var(--muted);
+    font-family: rubik;
 }
 .screen button{
-    padding: 10px 22px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
+    padding: 16px 45px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    font-family: outfit;
+}
+.screen button:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(108, 99, 255, 0.3);
+}
+.screen button:active {
+    transform: translateY(0);
 }
 .assist{
     padding: 10px 22px;
@@ -150,9 +295,46 @@ body{
 /**MOBILE RESPONSIVENESS**/
 @media (max-width: 600px) {
   .app {
-    margin: 50px 16px;
-    padding: 24px 20px;
+    margin: 30px 16px;
+    padding: 24px 16px;
     max-width: none;
+  }
+  
+  .opening {
+    padding: 30px 16px;
+  }
+  
+  .welcome-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .question-selector {
+    margin-bottom: 30px;
+  }
+  
+  .question-selector label {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .selector-group {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .range-input {
+    min-width: 150px;
+  }
+  
+  .start-btn {
+    padding: 14px 35px;
+    font-size: 16px;
   }
   
   .buttons {
@@ -170,6 +352,11 @@ body{
     font-size: 1.2rem;
   }
   
+  .top h3 {
+    font-size: 0.9rem;
+    padding: 4px 12px;
+  }
+  
   .button-group {
     gap: 8px;
   }
@@ -185,7 +372,39 @@ body{
     gap: 12px;
   }
   
-  .screen h2 {
-    font-size: 1.3rem;
+  .btm h4 {
+    font-size: 0.95rem;
+  }
+  
+  .screen {
+    padding: 30px 0;
+    gap: 25px;
+  }
+  
+  .screen h2:first-of-type {
+    font-size: 1.8rem;
+  }
+  
+  .screen h2:last-of-type {
+    font-size: 2.8rem;
+  }
+  
+  .result-percentage {
+    font-size: 1.5rem;
+    padding: 12px 25px;
+  }
+  
+  .screen .quiz-stats {
+    font-size: 0.9rem;
+  }
+  
+  .screen button {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+  
+  .assist {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }
