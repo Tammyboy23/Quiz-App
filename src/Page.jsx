@@ -14,7 +14,7 @@ function Page(){
     function handleAns(e, ans){
         if(answered) return;
         setAnswered(true);
-        if(ans === currentQuiz.correct){
+        if(ans === currentQuiz.answer){
             setscore(score + 1);
             e.target.classList.add("correct");
         } else {
@@ -48,6 +48,7 @@ function Page(){
     return(
         <>
         <div className="app">
+            {/**WELCOME SCREEN MADE BY ME 😘 */}
             {!quizStarted ? (
                 <div className="opening">
                     <div className="welcome-content">
@@ -72,13 +73,16 @@ function Page(){
                     </div>
                 </div>
             ) : currentQuestion < quizToShow.length ? (
+                /**QUIZ PAGE ITSELF */
                 <div className="quiz">
                     <div className="top">
                     <h3>Question: {currentQuestion + 1}</h3>
+
                     <h2>{currentQuiz.question}</h2>
                     </div>
+                    {/**QUESTION OPTION IN FORM OF BUTTONS */}
                     <div className="buttons">
-                        {currentQuiz.answers.map((ans) => (
+                        {currentQuiz.options.map((ans) => (
                             <button key={ans} onClick={(e) => handleAns(e, ans)} disabled={answered}>
                                 {ans}
                             </button>
