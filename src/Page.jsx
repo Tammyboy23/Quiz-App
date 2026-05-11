@@ -94,7 +94,6 @@ function Page(){
                         </div>
                     )}
                     <div className="btm">
-                        <h4>Score: {score}</h4>
                         <div className="button-group">
                             <button onClick={skipQuestion} disabled={currentQuestion === quizToShow.length - 1}>
                                 Skip

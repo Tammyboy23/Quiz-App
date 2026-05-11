@@ -4,21 +4,21 @@ export const quiz = [
     question: "How does the World Health Organization (WHO) define health?",
     options: ["Absence of disease", "Physical fitness only", "Complete well-being", "Mental strength"],
     answer: "Complete well-being",
-    explanation: "WHO defines health as physical, mental, and social well-being[cite: 153]."
+    explanation: "WHO defines health as physical, mental, and social well-being."
   },
   {
     id: 2,
     question: "What percentage of good nutrition should comprise fruits and vegetables?",
     options: ["30%", "50%", "70%", "90%"],
     answer: "70%",
-    explanation: "Good nutrition should consist of 70% fruits and vegetables[cite: 194]."
+    explanation: "Good nutrition should consist of 70% fruits and vegetables."
   },
   {
     id: 3,
     question: "Which gift from God is described as a memorial of creation?",
     options: ["Environment", "Sabbath", "Life", "Companionship"],
     answer: "Sabbath",
-    explanation: "The Sabbath is a sign of God's power and love[cite: 143]."
+    explanation: "The Sabbath is a sign of God's power and love."
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const quiz = [
     question: "Which behavior is characterized by seeking a remedy when perceiving oneself as ill?",
     options: ["Preventive behavior", "Illness behavior", "Sick-role behavior", "Health-depleting behavior"],
     answer: "Illness behavior",
-    explanation: "Illness behavior involves defining health status and finding remedies[cite: 190]."
+    explanation: "Illness behavior involves defining health status and finding remedies."
   },
   {
     id: 6,
@@ -46,14 +46,14 @@ export const quiz = [
     question: "What is the recommended daily intake of water sachets?",
     options: ["1-2", "4-6", "8-10", "12-15"],
     answer: "4-6",
-    explanation: "The document recommends 4-6 sachets of water daily[cite: 194]."
+    explanation: "The document recommends 4-6 sachets of water daily."
   },
   {
     id: 8,
     question: "Which dimension of health relates to finding meaning and purpose in life?",
     options: ["Social", "Physical", "Spiritual", "Emotional"],
     answer: "Spiritual",
-    explanation: "The spiritual dimension reaches for life's purpose[cite: 175]."
+    explanation: "The spiritual dimension reaches for life's purpose."
   },
   {
     id: 9,
