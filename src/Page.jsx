@@ -14,6 +14,11 @@ function Page(){
     const [score, setscore] = useState(0);
     const [answered, setAnswered] = useState(false);
     const [assist, setassist] = useState(false);
+    const [fullscreenWarning, setFullscreenWarning] = useState(false);
+    const [quizCancelled, setQuizCancelled] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(30);
+    const warningTimerRef = useRef(null);
+    const countdownTimerRef = useRef(null);
     
     useEffect(() => {
         setSelectedQuestions(prev => Math.min(prev, quiz.length));
@@ -22,13 +27,38 @@ function Page(){
 
     useEffect(() => {
         const handleFullscreenChange = () => {
-            if (!document.fullscreenElement && quizStarted) {
-                // User exited fullscreen while quiz was running, restart the quiz
+            if (document.fullscreenElement && fullscreenWarning) {
+                // User returned to fullscreen - dismiss warning and continue
+                setFullscreenWarning(false);
+                setTimeLeft(20);
+                if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+                if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
+            } else if (!document.fullscreenElement && quizStarted && !fullscreenWarning) {
+                //If some nigga leaves it shows a warning
+                setFullscreenWarning(true);
+                setTimeLeft(20);
+                
+                // 30 second countdown
+                let seconds = 20;
+                countdownTimerRef.current = setInterval(() => {
+                    seconds -= 1;
+                    setTimeLeft(seconds);
+                    
+                    if (seconds <= 0) {
+                        // Timer expired - cancel quiz
+                        clearInterval(countdownTimerRef.current);
+                        setQuizCancelled(true);
+                        setFullscreenWarning(false);
+                        setQuizStarted(false);
+                    }
+                }, 1000);
+            } else if (!document.fullscreenElement && fullscreenWarning && quizStarted) {
+                // User exited fullscreen again while warning was active - cancel quiz
+                setQuizCancelled(true);
+                setFullscreenWarning(false);
                 setQuizStarted(false);
-                setcurrentQuestion(0);
-                setscore(0);
-                setAnswered(false);
-                setassist(false);
+                if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+                if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
             }
         };
 
@@ -36,7 +66,7 @@ function Page(){
         return () => {
             document.removeEventListener("fullscreenchange", handleFullscreenChange);
         };
-    }, [quizStarted]);
+    }, [quizStarted, fullscreenWarning]);
 
     const quizToShow = quiz.slice(0, selectedQuestions);
     const currentQuiz = quizToShow[currentQuestion];
@@ -71,6 +101,11 @@ function Page(){
         setscore(0)
         setAnswered(false)
         setassist(false)
+        setFullscreenWarning(false)
+        setQuizCancelled(false)
+        setTimeLeft(30)
+        if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+        if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
     }
     function nextQuestion(){
         setAnswered(false)
@@ -86,7 +121,36 @@ function Page(){
     return(
         <>
         <div className="app" ref={appRef}>
-            {!quizStarted ? (
+            {quizCancelled ? (
+                <div className="screen">
+                    <h2>Quiz Cancelled ❌</h2>
+                    <div className="quiz-stats" style={{color: "var(--incorrect)"}}>
+                        You left fullscreen. The quiz has been cancelled.
+                    </div>
+                    <h2 style={{fontSize: "2rem", color: "var(--incorrect)"}}>FAILED</h2>
+                    <button onClick={() => restart()}>Try Again</button>
+                </div>
+            ) : fullscreenWarning ? (
+                <div className="screen">
+                    <h2>⚠️ Fullscreen Required</h2>
+                    <div className="quiz-stats">
+                        You've exited fullscreen. Please return to fullscreen to continue your quiz.
+                    </div>
+                    <div className="result-percentage">
+                        {timeLeft}s
+                    </div>
+                    <div className="quiz-stats" style={{color: "var(--incorrect)"}}>
+                        If you don't return within {timeLeft} seconds, your quiz will be cancelled.
+                    </div>
+                    <button onClick={() => {
+                        if (appRef.current && appRef.current.requestFullscreen) {
+                            appRef.current.requestFullscreen().catch(err => {
+                                console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                            });
+                        }
+                    }}>Return to Fullscreen</button>
+                </div>
+            ) : !quizStarted ? (
                 <div className="opening">
                     <div className="welcome-content">
                         <h1>Quizora</h1>

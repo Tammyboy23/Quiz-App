@@ -20,8 +20,8 @@
 }
 body{
     background: var(--bg);
-    color: var(--font)
-
+    color: var(--font);
+    padding: 40px 30px;
 }
 .app{
     display: flex;
@@ -35,6 +35,33 @@ body{
     border: 0.005rem solid var(--muted);
     border-radius: 15px;
     transition: 0.5s ease;
+}
+
+.app:fullscreen {
+    margin: 40px;
+    max-width: calc(100% - 80px);
+    width: calc(100% - 80px);
+    height: auto;
+    border-radius: 20px;
+    padding: 40px 50px;
+}
+
+.app:-webkit-full-screen {
+    margin: 40px;
+    max-width: calc(100% - 80px);
+    width: calc(100% - 80px);
+    height: auto;
+    border-radius: 20px;
+    padding: 40px 50px;
+}
+
+.app:-moz-full-screen {
+    margin: 40px;
+    max-width: calc(100% - 80px);
+    width: calc(100% - 80px);
+    height: auto;
+    border-radius: 20px;
+    padding: 40px 50px;
 }
 @media(max-width: 450px){
     .app{
