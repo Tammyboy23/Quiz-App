@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { quiz1 } from "./Questions/CTM";
 import { quiz2 } from "./Questions/HLT";
 
@@ -7,6 +7,7 @@ function Page(){
     const quizsel = [quiz1, quiz2];
     const [active, setactive] = useState(0);
     const quiz = quizsel[active];
+    const appRef = useRef(null);
 
     const [selectedQuestions, setSelectedQuestions] = useState(quiz.length);
     const [currentQuestion, setcurrentQuestion] = useState(0);
@@ -18,6 +19,24 @@ function Page(){
         setSelectedQuestions(prev => Math.min(prev, quiz.length));
         setcurrentQuestion(0);
     }, [active, quiz.length]);
+
+    useEffect(() => {
+        const handleFullscreenChange = () => {
+            if (!document.fullscreenElement && quizStarted) {
+                // User exited fullscreen while quiz was running, restart the quiz
+                setQuizStarted(false);
+                setcurrentQuestion(0);
+                setscore(0);
+                setAnswered(false);
+                setassist(false);
+            }
+        };
+
+        document.addEventListener("fullscreenchange", handleFullscreenChange);
+        return () => {
+            document.removeEventListener("fullscreenchange", handleFullscreenChange);
+        };
+    }, [quizStarted]);
 
     const quizToShow = quiz.slice(0, selectedQuestions);
     const currentQuiz = quizToShow[currentQuestion];
@@ -38,6 +57,13 @@ function Page(){
         setcurrentQuestion(0)
         setscore(0)
         setAnswered(false)
+        
+        // Request fullscreen
+        if (appRef.current && appRef.current.requestFullscreen) {
+            appRef.current.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        }
     }
     function restart(){
         setQuizStarted(false)
@@ -59,7 +85,7 @@ function Page(){
    
     return(
         <>
-        <div className="app">
+        <div className="app" ref={appRef}>
             {!quizStarted ? (
                 <div className="opening">
                     <div className="welcome-content">
