@@ -128,7 +128,7 @@ function Page(){
                 <div className="screen">
                     <h2>Quiz Cancelled ❌</h2>
                     <div className="quiz-stats" style={{color: "var(--incorrect)"}}>
-                        You left fullscreen. The quiz has been cancelled.
+                        You left fullscreen. Idiot! simple instruction you can't hear.
                     </div>
                     <h2 style={{fontSize: "2rem", color: "var(--incorrect)"}}>FAILED</h2>
                     <button onClick={() => restart()}>Try Again</button>
@@ -137,7 +137,7 @@ function Page(){
                 <div className="screen">
                     <h2>⚠️ Fullscreen Required</h2>
                     <div className="quiz-stats">
-                        You've exited fullscreen. Please return to fullscreen to continue your quiz.
+                        You've exited fullscreen. Don't be a fool and return to fullscreen to continue your quiz.
                     </div>
                     <div className="result-percentage">
                         {timeLeft}s
