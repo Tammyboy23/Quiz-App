@@ -9,6 +9,7 @@ function Page(){
     const quiz = quizsel[active];
     const appRef = useRef(null);
 
+    const [mode, setMode] = useState("practice");
     const [selectedQuestions, setSelectedQuestions] = useState(quiz.length);
     const [currentQuestion, setcurrentQuestion] = useState(0);
     const [score, setscore] = useState(0);
@@ -17,7 +18,6 @@ function Page(){
     const [fullscreenWarning, setFullscreenWarning] = useState(false);
     const [quizCancelled, setQuizCancelled] = useState(false);
     const [timeLeft, setTimeLeft] = useState(30);
-    const warningTimerRef = useRef(null);
     const countdownTimerRef = useRef(null);
     
     useEffect(() => {
@@ -27,25 +27,26 @@ function Page(){
 
     useEffect(() => {
         const handleFullscreenChange = () => {
+            if (mode !== "exam" || !quizStarted) {
+                return;
+            }
+
             if (document.fullscreenElement && fullscreenWarning) {
                 // User returned to fullscreen - dismiss warning and continue
                 setFullscreenWarning(false);
-                setTimeLeft(20);
-                if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+                setTimeLeft(30);
                 if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
             } else if (!document.fullscreenElement && quizStarted && !fullscreenWarning) {
-                //If some nigga leaves it shows a warning
+                // User exited fullscreen in exam mode - show warning and start countdown
                 setFullscreenWarning(true);
-                setTimeLeft(20);
-                
-                // 30 second countdown
-                let seconds = 20;
+                setTimeLeft(30);
+
+                let seconds = 30;
                 countdownTimerRef.current = setInterval(() => {
                     seconds -= 1;
                     setTimeLeft(seconds);
-                    
+
                     if (seconds <= 0) {
-                        // Timer expired - cancel quiz
                         clearInterval(countdownTimerRef.current);
                         setQuizCancelled(true);
                         setFullscreenWarning(false);
@@ -57,7 +58,6 @@ function Page(){
                 setQuizCancelled(true);
                 setFullscreenWarning(false);
                 setQuizStarted(false);
-                if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
                 if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
             }
         };
@@ -66,7 +66,7 @@ function Page(){
         return () => {
             document.removeEventListener("fullscreenchange", handleFullscreenChange);
         };
-    }, [quizStarted, fullscreenWarning]);
+    }, [quizStarted, fullscreenWarning, mode]);
 
     const quizToShow = quiz.slice(0, selectedQuestions);
     const currentQuiz = quizToShow[currentQuestion];
@@ -87,12 +87,16 @@ function Page(){
         setcurrentQuestion(0)
         setscore(0)
         setAnswered(false)
-        
-        // Request fullscreen
-        if (appRef.current && appRef.current.requestFullscreen) {
-            appRef.current.requestFullscreen().catch(err => {
-                console.error(`Error attempting to enable fullscreen: ${err.message}`);
-            });
+        setFullscreenWarning(false)
+        setQuizCancelled(false)
+        setTimeLeft(30)
+
+        if (mode === "exam") {
+            if (appRef.current && appRef.current.requestFullscreen) {
+                appRef.current.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            }
         }
     }
     function restart(){
@@ -104,7 +108,6 @@ function Page(){
         setFullscreenWarning(false)
         setQuizCancelled(false)
         setTimeLeft(30)
-        if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
         if (countdownTimerRef.current) clearInterval(countdownTimerRef.current);
     }
     function nextQuestion(){
@@ -172,6 +175,10 @@ function Page(){
                             <select value={active} onChange={(e) => setactive(Number(e.target.value))}>
                                 <option value={0}>Chapter 1 - 5</option>
                                 <option value={1}>Chapter 6 - 10</option>
+                            </select>
+                            <select value={mode} onChange={(e) => setMode(e.target.value)}>
+                                <option value="practice">Practice Mode</option>
+                                <option value="exam">Exam Mode</option>
                             </select>
                         </div>
                         <button className="start-btn" onClick={startQuiz}>Start Quiz</button>
