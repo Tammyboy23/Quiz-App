@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { quiz } from "./Questions/CTM";
+import { quiz1 } from "./Questions/CTM";
+import { quiz2 } from "./Questions/CTM";
 function Page(){
     const [quizStarted, setQuizStarted] = useState(false);
+    const quizsel = [quiz1, quiz2];
+    const [active, setactive] = useState(0);
+    let quiz = quizsel[active]
     const [selectedQuestions, setSelectedQuestions] = useState(quiz.length);
     const [currentQuestion, setcurrentQuestion] = useState(0);
     const [score, setscore] = useState(0);
@@ -68,6 +72,10 @@ function Page(){
                                 />
                                 <span className="question-count">{selectedQuestions}/{quiz.length}</span>
                             </div>
+                            <select  value={active} onClick={(e) => setactive(e.target.value)}>
+                                <option value={0}>QUIZ 1</option>
+                                <option value={1} onClick={() => setactive(0)}>QUIZ 2</option>
+                            </select>
                         </div>
                         <button className="start-btn" onClick={startQuiz}>Start Quiz</button>
                     </div>
