@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { quiz1 } from "./Questions/CTM";
-import { quiz2 } from "./Questions/HLT";
+import { quiz1 } from "./Questions/Quiz1";
+import { quiz2 } from "./Questions/Quiz2";
 
 function Page(){
     const [quizStarted, setQuizStarted] = useState(false);
@@ -173,8 +173,8 @@ function Page(){
                                 <span className="question-count">{selectedQuestions}/{quiz.length}</span>
                             </div>
                             <select value={active} onChange={(e) => setactive(Number(e.target.value))}>
-                                <option value={0}>Chapter 1 - 5</option>
-                                <option value={1}>Chapter 6 - 10</option>
+                                <option value={0}>PHYSICS</option>
+                                <option value={1}>MATHS</option>
                             </select>
                             <select value={mode} onChange={(e) => setMode(e.target.value)}>
                                 <option value="practice">Practice Mode</option>
