@@ -80,8 +80,8 @@ function Page(){
                                 <span className="question-count">{selectedQuestions}/{quiz.length}</span>
                             </div>
                             <select value={active} onChange={(e) => setactive(Number(e.target.value))}>
-                                <option value={0}>QUIZ 1</option>
-                                <option value={1}>QUIZ 2</option>
+                                <option value={0}>Chapter 1 - 5</option>
+                                <option value={1}>Chapter 6 - 10</option>
                             </select>
                         </div>
                         <button className="start-btn" onClick={startQuiz}>Start Quiz</button>
