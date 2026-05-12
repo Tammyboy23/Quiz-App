@@ -190,6 +190,17 @@ function Page(){
                         <h3>Question: {currentQuestion + 1}</h3>
                         <h2>{currentQuiz.question}</h2>
                     </div>
+                    <div className="progress-wrap">
+                        <div className="progress-label">
+                            {quizToShow.length - currentQuestion - 1} questions left
+                        </div>
+                        <div className="progress-bar">
+                            <div
+                                className="progress-fill"
+                                style={{ width: `${((currentQuestion + 1) / quizToShow.length) * 100}%` }}
+                            />
+                        </div>
+                    </div>
                     <div className="buttons">
                         {currentQuiz.options.map((ans) => (
                             <button key={ans} onClick={(e) => handleAns(e, ans)} disabled={answered}>
@@ -199,7 +210,7 @@ function Page(){
                     </div>
                     {assist && (
                         <div className="assist">
-                            {currentQuiz.explanation}
+                            Ans: {currentQuiz.answer}
                         </div>
                     )}
                     <div className="btm">
