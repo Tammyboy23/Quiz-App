@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { quiz1 } from "./Questions/CTM";
-import { quiz2 } from "./Questions/CTM";
+import { quiz2 } from "./Questions/HLT";
+
 function Page(){
     const [quizStarted, setQuizStarted] = useState(false);
     const quizsel = [quiz1, quiz2];
     const [active, setactive] = useState(0);
-    let quiz = quizsel[active]
+    const quiz = quizsel[active];
+
     const [selectedQuestions, setSelectedQuestions] = useState(quiz.length);
     const [currentQuestion, setcurrentQuestion] = useState(0);
     const [score, setscore] = useState(0);
     const [answered, setAnswered] = useState(false);
     const [assist, setassist] = useState(false);
     
+    useEffect(() => {
+        setSelectedQuestions(prev => Math.min(prev, quiz.length));
+        setcurrentQuestion(0);
+    }, [active, quiz.length]);
+
     const quizToShow = quiz.slice(0, selectedQuestions);
-    const currentQuiz = quizToShow[currentQuestion]
+    const currentQuiz = quizToShow[currentQuestion];
     
     function handleAns(e, ans){
         if(answered) return;
@@ -37,6 +44,7 @@ function Page(){
         setcurrentQuestion(0)
         setscore(0)
         setAnswered(false)
+        setassist(false)
     }
     function nextQuestion(){
         setAnswered(false)
@@ -52,7 +60,6 @@ function Page(){
     return(
         <>
         <div className="app">
-            {/**WELCOME SCREEN MADE BY ME 😘 */}
             {!quizStarted ? (
                 <div className="opening">
                     <div className="welcome-content">
@@ -72,23 +79,20 @@ function Page(){
                                 />
                                 <span className="question-count">{selectedQuestions}/{quiz.length}</span>
                             </div>
-                            <select  value={active} onClick={(e) => setactive(e.target.value)}>
+                            <select value={active} onChange={(e) => setactive(Number(e.target.value))}>
                                 <option value={0}>QUIZ 1</option>
-                                <option value={1} onClick={() => setactive(0)}>QUIZ 2</option>
+                                <option value={1}>QUIZ 2</option>
                             </select>
                         </div>
                         <button className="start-btn" onClick={startQuiz}>Start Quiz</button>
                     </div>
                 </div>
             ) : currentQuestion < quizToShow.length ? (
-                /**QUIZ PAGE ITSELF */
                 <div className="quiz">
                     <div className="top">
-                    <h3>Question: {currentQuestion + 1}</h3>
-
-                    <h2>{currentQuiz.question}</h2>
+                        <h3>Question: {currentQuestion + 1}</h3>
+                        <h2>{currentQuiz.question}</h2>
                     </div>
-                    {/**QUESTION OPTION IN FORM OF BUTTONS */}
                     <div className="buttons">
                         {currentQuiz.options.map((ans) => (
                             <button key={ans} onClick={(e) => handleAns(e, ans)} disabled={answered}>
@@ -124,9 +128,7 @@ function Page(){
                     </div>
                     <button onClick={() => restart()}>Take Another Quiz</button>
                 </div>
-                
             )}
-            
         </div>
         </>
     )
