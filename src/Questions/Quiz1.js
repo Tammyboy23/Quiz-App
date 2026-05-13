@@ -1,702 +1,636 @@
+//Quizora Physics Questions 
+
+
 export const quiz1 = [
   {
-    id: 1,
-    question: "Which of the following is a characteristic of a conductor?",
-    options: ["Tightly bound electrons", "High resistance", "Presence of free electrons", "Prevents charge flow"],
-    answer: "Presence of free electrons",
-    explanation: "Conductors have free electrons that allow electric charges to move easily."
+    "question": "Which particle carries a negative electric charge?",
+    "options": ["Proton", "Electron", "Neutron", "Photon"],
+    "answer": "Electron",
+    "topic": "Electric Charges"
   },
   {
-    id: 2,
-    question: "What happens to a neutral metallic sphere if a positively charged rod is brought near it (without touching)?",
-    options: ["It becomes positively charged", "It becomes negatively charged", "Charges polarize within it", "It gains protons"],
-    answer: "Charges polarize within it",
-    explanation: "Induction causes charge redistribution, attracting negatives to the side near the rod."
+    "question": "Like charges ______ each other.",
+    "options": ["Attract", "Repel", "Destroy", "Ignore"],
+    "answer": "Repel",
+    "topic": "Electric Charges"
   },
   {
-    id: 3,
-    question: "The electric field inside a conductor in electrostatic equilibrium is always:",
-    options: ["Maximum", "Infinite", "Zero", "Dependent on the size"],
-    answer: "Zero",
-    explanation: "Charges reside on the surface, making the internal net electric field zero."
+    "question": "Unlike charges ______ each other.",
+    "options": ["Repel", "Attract", "Neutralize", "Separate"],
+    "answer": "Attract",
+    "topic": "Electric Charges"
   },
   {
-    id: 4,
-    question: "What is the direction of electric field lines for a positive point charge?",
-    options: ["Radially inward", "Radially outward", "Circular", "Tangent to the surface"],
-    answer: "Radially outward",
-    explanation: "Field lines are defined as the direction of force on a positive test charge."
+    "question": "What is the SI unit of electric charge?",
+    "options": ["Volt", "Ampere", "Coulomb", "Ohm"],
+    "answer": "Coulomb",
+    "topic": "Electric Charges"
   },
   {
-    id: 5,
-    question: "The principle used to find the total electric field from multiple charges is:",
-    options: ["Gauss’s Law", "Ohm’s Law", "Superposition", "Coulomb's Law"],
-    answer: "Superposition",
-    explanation: "Total field is the vector sum of individual fields."
+    "question": "Which material is a good conductor of electricity?",
+    "options": ["Rubber", "Plastic", "Copper", "Wood"],
+    "answer": "Copper",
+    "topic": "Conductors and Insulators"
   },
   {
-    id: 6,
-    question: "An electric dipole consists of:",
-    options: ["Two positive charges", "Two negative charges", "Two equal and opposite charges", "A single moving charge"],
-    answer: "Two equal and opposite charges",
-    explanation: "A dipole is a pair of opposite charges separated by a small distance."
+    "question": "Which material is an insulator?",
+    "options": ["Silver", "Copper", "Rubber", "Aluminium"],
+    "answer": "Rubber",
+    "topic": "Conductors and Insulators"
   },
   {
-    id: 7,
-    question: "The SI unit for Electric Flux is:",
-    options: ["N/C", "V/m", "N·m²/C", "Farads"],
-    answer: "N·m²/C",
-    explanation: "Flux is the product of electric field and the area it passes through."
+    "question": "Electric current in metals is mainly due to the movement of ______.",
+    "options": ["Protons", "Electrons", "Neutrons", "Atoms"],
+    "answer": "Electrons",
+    "topic": "Conductors and Insulators"
   },
   {
-    id: 8,
-    question: "According to Gauss's Law, net flux through a closed surface depends only on:",
-    options: ["The surface area", "The shape of the surface", "The enclosed net charge", "The distance to the charge"],
-    answer: "The enclosed net charge",
-    explanation: "Flux = Q(enclosed) / epsilon_0."
+    "question": "Charging an object by rubbing is called charging by ______.",
+    "options": ["Induction", "Conduction", "Friction", "Radiation"],
+    "answer": "Friction",
+    "topic": "Charging by Induction"
   },
   {
-    id: 9,
-    question: "Electric flux is a ________ quantity.",
-    options: ["Vector", "Scalar", "Negative only", "Imaginary"],
-    answer: "Scalar",
-    explanation: "Flux represents a total 'count' of field lines and has no direction."
+    "question": "Charging without direct contact is called ______.",
+    "options": ["Conduction", "Induction", "Friction", "Ionization"],
+    "answer": "Induction",
+    "topic": "Charging by Induction"
   },
   {
-    id: 10,
-    question: "Electric potential (V) is defined as:",
-    options: ["Force per charge", "Work per unit charge", "Flux per area", "Current times time"],
-    answer: "Work per unit charge",
-    explanation: "Potential is the potential energy per unit charge."
+    "question": "Coulomb’s law deals with electric ______ between charges.",
+    "options": ["Resistance", "Force", "Power", "Potential"],
+    "answer": "Force",
+    "topic": "Electric Field and Electric Forces"
   },
   {
-    id: 11,
-    question: "Equipotential surfaces are always ________ to electric field lines.",
-    options: ["Parallel", "Perpendicular", "At a 45 degree angle", "Random"],
-    answer: "Perpendicular",
-    explanation: "No work is done moving along an equipotential surface."
+    "question": "The electric field intensity is measured in ______.",
+    "options": ["N/C", "J", "C", "W"],
+    "answer": "N/C",
+    "topic": "Electric Field"
   },
   {
-    id: 12,
-    question: "A sharp point on a conductor has ________ charge density compared to a flat surface.",
-    options: ["Lower", "Higher", "The same", "Zero"],
-    answer: "Higher",
-    explanation: "Charges accumulate more densely at regions with small radii of curvature."
+    "question": "Electric field lines around a positive charge point ______.",
+    "options": ["Inward", "Outward", "Clockwise", "Downward"],
+    "answer": "Outward",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 13,
-    question: "What is the unit of Capacitance?",
-    options: ["Ohm", "Henry", "Farad", "Volt"],
-    answer: "Farad",
-    explanation: "Capacitance (C = Q/V) is measured in Farads (F)."
+    "question": "Electric field lines around a negative charge point ______.",
+    "options": ["Outward", "Inward", "Upward", "Sideways"],
+    "answer": "Inward",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 14,
-    question: "If two capacitors are in parallel, the equivalent capacitance is:",
-    options: ["C1 + C2", "1/C1 + 1/C2", "(C1*C2)/(C1+C2)", "C1 - C2"],
-    answer: "C1 + C2",
-    explanation: "Parallel connection increases the total area for charge storage."
+    "question": "The electric field due to a point charge decreases with ______.",
+    "options": ["Distance", "Mass", "Temperature", "Pressure"],
+    "answer": "Distance",
+    "topic": "Electric Field of a Point Charge"
   },
   {
-    id: 15,
-    question: "Inserting a dielectric between capacitor plates ________ the capacitance.",
-    options: ["Decreases", "Increases", "Does not change", "Eliminates"],
-    answer: "Increases",
-    explanation: "Dielectrics reduce the internal field, allowing more charge storage."
+    "question": "The principle of superposition applies to ______.",
+    "options": ["Electric fields", "Mass", "Heat", "Sound"],
+    "answer": "Electric fields",
+    "topic": "Superposition of Electric Fields"
   },
   {
-    id: 16,
-    question: "The energy stored in a capacitor is stored in its:",
-    options: ["Metal plates", "Connecting wires", "Electric field", "Battery"],
-    answer: "Electric field",
-    explanation: "Energy is held in the electric field between the plates."
+    "question": "An electric dipole consists of ______.",
+    "options": ["Two positive charges", "Two equal opposite charges", "Three charges", "One neutral atom"],
+    "answer": "Two equal opposite charges",
+    "topic": "Electric Dipoles"
   },
   {
-    id: 17,
-    question: "Electric current is defined as the rate of flow of:",
-    options: ["Voltage", "Resistance", "Charge", "Energy"],
-    answer: "Charge",
-    explanation: "Current (I) = dQ / dt."
+    "question": "The SI unit of electric flux is ______.",
+    "options": ["Nm²/C", "C", "J", "V"],
+    "answer": "Nm²/C",
+    "topic": "Electric Flux"
   },
   {
-    id: 18,
-    question: "The SI unit of resistivity is:",
-    options: ["Ohm", "Ohm-meter", "Volt", "Ampere"],
-    answer: "Ohm-meter",
-    explanation: "Resistivity is an intrinsic property of a material."
+    "question": "Gauss’s law relates electric flux to enclosed ______.",
+    "options": ["Mass", "Charge", "Energy", "Power"],
+    "answer": "Charge",
+    "topic": "Gauss’s Law"
   },
   {
-    id: 19,
-    question: "Resistance is ________ proportional to the length of a conductor.",
-    options: ["Inversely", "Directly", "Not", "Exponentially"],
-    answer: "Directly",
-    explanation: "As a wire gets longer, its resistance increases."
+    "question": "Electric potential is defined as work done per unit ______.",
+    "options": ["Current", "Charge", "Resistance", "Force"],
+    "answer": "Charge",
+    "topic": "Electric Potential"
   },
   {
-    id: 20,
-    question: "Ohm's Law states that V is equal to:",
-    options: ["I / R", "I + R", "I * R", "R / I"],
-    answer: "I * R",
-    explanation: "Voltage equals current multiplied by resistance."
+    "question": "The SI unit of electric potential is ______.",
+    "options": ["Volt", "Ampere", "Ohm", "Tesla"],
+    "answer": "Volt",
+    "topic": "Electric Potential"
   },
   {
-    id: 21,
-    question: "Electromotive Force (EMF) is measured in:",
-    options: ["Newtons", "Joules", "Volts", "Watts"],
-    answer: "Volts",
-    explanation: "EMF is a potential difference, not a mechanical force."
+    "question": "Equipotential surfaces are always ______ to electric field lines.",
+    "options": ["Parallel", "Perpendicular", "Equal", "Opposite"],
+    "answer": "Perpendicular",
+    "topic": "Equipotential Surfaces"
   },
   {
-    id: 22,
-    question: "Electrical power dissipated by a resistor can be expressed as:",
-    options: ["V * I", "I² * R", "V² / R", "All of the above"],
-    answer: "All of the above",
-    explanation: "These are three common ways to calculate electric power."
+    "question": "Capacitance is the ability to store ______.",
+    "options": ["Heat", "Charge", "Resistance", "Mass"],
+    "answer": "Charge",
+    "topic": "Capacitance"
   },
   {
-    id: 23,
-    question: "A Gaussian surface must be:",
-    options: ["A square", "An open surface", "A closed surface", "A conductor"],
-    answer: "A closed surface",
-    explanation: "Gauss's law applies only to three-dimensional closed boundaries."
+    "question": "The SI unit of capacitance is ______.",
+    "options": ["Farad", "Henry", "Tesla", "Volt"],
+    "answer": "Farad",
+    "topic": "Capacitance"
   },
   {
-    id: 24,
-    question: "What happens to the potential as you move against electric field lines?",
-    options: ["It increases", "It decreases", "It stays constant", "It becomes zero"],
-    answer: "It increases",
-    explanation: "Moving toward a positive source (against the field) increases potential."
+    "question": "Capacitors connected end to end are in ______.",
+    "options": ["Parallel", "Series", "Bridge", "Loop"],
+    "answer": "Series",
+    "topic": "Capacitors in Series and Parallel"
   },
   {
-    id: 25,
-    question: "The potential energy of two opposite charges ________ as they move apart.",
-    options: ["Increases", "Decreases", "Stays the same", "Becomes negative"],
-    answer: "Increases",
-    explanation: "Since they attract, work must be done to pull them apart."
+    "question": "A dielectric material is usually an ______.",
+    "options": ["Insulator", "Conductor", "Semiconductor", "Alloy"],
+    "answer": "Insulator",
+    "topic": "Dielectrics"
   },
   {
-    id: 26,
-    question: "Materials that do not allow charges to move easily are called:",
-    options: ["Conductors", "Insulators", "Semiconductors", "Metals"],
-    answer: "Insulators",
-    explanation: "Insulators have tightly bound electrons."
+    "question": "Electric current is the rate of flow of ______.",
+    "options": ["Energy", "Charge", "Mass", "Heat"],
+    "answer": "Charge",
+    "topic": "Current"
   },
   {
-    id: 27,
-    question: "The net charge of an electric dipole is:",
-    options: ["Positive", "Negative", "Zero", "Variable"],
-    answer: "Zero",
-    explanation: "A dipole consists of equal and opposite charges (+q and -q)."
+    "question": "The SI unit of electric current is ______.",
+    "options": ["Volt", "Ampere", "Ohm", "Coulomb"],
+    "answer": "Ampere",
+    "topic": "Current"
   },
   {
-    id: 28,
-    question: "In a series circuit of capacitors, what is constant for each capacitor?",
-    options: ["Voltage", "Capacitance", "Charge", "Energy"],
-    answer: "Charge",
-    explanation: "In series, each capacitor holds the same amount of charge."
+    "question": "Resistance opposes the flow of ______.",
+    "options": ["Mass", "Current", "Heat", "Light"],
+    "answer": "Current",
+    "topic": "Resistance"
   },
   {
-    id: 29,
-    question: "A dielectric material is essentially a(n):",
-    options: ["Conductor", "Insulator", "Battery", "Resistor"],
-    answer: "Insulator",
-    explanation: "Dielectrics are insulating materials that can be polarized."
+    "question": "Ohm’s law states that V = ______.",
+    "options": ["IR", "I/R", "R/I", "P/R"],
+    "answer": "IR",
+    "topic": "Resistance"
   },
   {
-    id: 30,
-    question: "Current density (J) is the current per unit:",
-    options: ["Time", "Length", "Area", "Volume"],
-    answer: "Area",
-    explanation: "J = I / A."
+    "question": "The SI unit of resistance is ______.",
+    "options": ["Farad", "Ohm", "Tesla", "Henry"],
+    "answer": "Ohm",
+    "topic": "Resistance"
   },
   {
-    id: 31,
-    question: "The drift velocity of electrons is usually very:",
-    options: ["Fast", "Slow", "Constant", "Random"],
-    answer: "Slow",
-    explanation: "Despite the speed of the signal, actual electron drift is quite slow."
+    "question": "Resistivity depends mainly on the ______ of the material.",
+    "options": ["Color", "Nature", "Shape", "Volume"],
+    "answer": "Nature",
+    "topic": "Resistivity"
   },
   {
-    id: 32,
-    question: "Resistance is inversely proportional to ________ of the conductor.",
-    options: ["Length", "Area", "Temperature", "Voltage"],
-    answer: "Area",
-    explanation: "A wider wire (larger area) has less resistance."
+    "question": "Electromotive force is commonly represented by ______.",
+    "options": ["R", "E", "P", "Q"],
+    "answer": "E",
+    "topic": "Electromotive Force"
   },
   {
-    id: 33,
-    question: "A device that converts chemical energy to electrical energy is a:",
-    options: ["Resistor", "Capacitor", "Battery", "Inductor"],
-    answer: "Battery",
-    explanation: "Batteries use chemical reactions to create a potential difference."
+    "question": "Electrical power is measured in ______.",
+    "options": ["Joule", "Watt", "Newton", "Volt"],
+    "answer": "Watt",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 34,
-    question: "What is the unit of Electric Potential Energy?",
-    options: ["Volt", "Joule", "Watt", "Coulomb"],
-    answer: "Joule",
-    explanation: "Like all forms of energy, it is measured in Joules."
+    "question": "The formula for electrical power is ______.",
+    "options": ["P = VI", "P = IR", "P = V/R", "P = Q/t"],
+    "answer": "P = VI",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 35,
-    question: "Induced dipoles occur when a dielectric is placed in a(n):",
-    options: ["Magnetic field", "Electric field", "Vacuum", "Water tank"],
-    answer: "Electric field",
-    explanation: "The field causes a shift in the charge distribution of molecules."
+    "question": "Two like charges brought close together will ______.",
+    "options": ["Attract", "Repel", "Neutralize", "Fuse"],
+    "answer": "Repel",
+    "topic": "Electric Charges"
   },
   {
-    id: 36,
-    question: "Work done in moving a charge around a closed path in an electric field is:",
-    options: ["Infinite", "Positive", "Negative", "Zero"],
-    answer: "Zero",
-    explanation: "Electric fields are conservative; net work for a closed loop is zero."
+    "question": "An object becomes positively charged when it ______ electrons.",
+    "options": ["Gains", "Loses", "Creates", "Destroys"],
+    "answer": "Loses",
+    "topic": "Electric Charges"
   },
   {
-    id: 37,
-    question: "The total flux through a surface containing no charge is:",
-    options: ["Positive", "Negative", "Zero", "Constant"],
-    answer: "Zero",
-    explanation: "Flux depends entirely on the net enclosed charge."
+    "question": "An object becomes negatively charged when it ______ electrons.",
+    "options": ["Loses", "Gains", "Burns", "Transfers"],
+    "answer": "Gains",
+    "topic": "Electric Charges"
   },
   {
-    id: 38,
-    question: "Superposition of fields involves ________ addition.",
-    options: ["Scalar", "Vector", "Arithmetic", "Multiplicative"],
-    answer: "Vector",
-    explanation: "Because the electric field has direction, vectors must be used."
+    "question": "The electric field at a point gives the force on a ______ charge.",
+    "options": ["Positive test", "Negative", "Neutral", "Large"],
+    "answer": "Positive test",
+    "topic": "Electric Field"
   },
   {
-    id: 39,
-    question: "Which of the following describes 'Current'?",
-    options: ["Energy/Charge", "Charge/Time", "Work/Time", "Force/Charge"],
-    answer: "Charge/Time",
-    explanation: "Amperes = Coulombs per second."
+    "question": "Electric field lines never ______ each other.",
+    "options": ["Touch", "Cross", "Curve", "Extend"],
+    "answer": "Cross",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 40,
-    question: "What happens to the terminal voltage of a battery when current increases?",
-    options: ["Increases", "Decreases", "Stays same", "Becomes zero"],
-    answer: "Decreases",
-    explanation: "Internal resistance causes a 'voltage drop' as current flows."
+    "question": "The region around a charge where another charge experiences force is called ______.",
+    "options": ["Magnetic field", "Electric field", "Potential", "Resistance"],
+    "answer": "Electric field",
+    "topic": "Electric Field"
   },
   {
-    id: 41,
-    question: "Potential of a grounded conductor is defined as:",
-    options: ["Zero", "Infinite", "100 Volts", "Variable"],
-    answer: "Zero",
-    explanation: "Earthing/grounding provides a reference potential of zero."
+    "question": "The force between charges increases when distance ______.",
+    "options": ["Increases", "Decreases", "Doubles", "Remains constant"],
+    "answer": "Decreases",
+    "topic": "Electric Forces"
   },
   {
-    id: 42,
-    question: "Electric field lines point toward ________ potential.",
-    options: ["Higher", "Lower", "Neutral", "Infinite"],
-    answer: "Lower",
-    explanation: "Field lines move from positive (high) to negative (low)."
+    "question": "Gauss’s law is most useful for solving problems with ______.",
+    "options": ["Symmetry", "Heat", "Pressure", "Friction"],
+    "answer": "Symmetry",
+    "topic": "Gauss’s Law"
   },
   {
-    id: 43,
-    question: "A parallel-plate capacitor's capacitance depends on:",
-    options: ["Plate area", "Separation distance", "Medium between plates", "All of the above"],
-    answer: "All of the above",
-    explanation: "C = (epsilon * A) / d."
+    "question": "Electric potential energy depends on the ______ of charges.",
+    "options": ["Position", "Color", "Shape", "Density"],
+    "answer": "Position",
+    "topic": "Electric Potential Energy"
   },
   {
-    id: 44,
-    question: "Charge can be neither created nor destroyed. This is:",
-    options: ["Ohm's Law", "Conservation of Charge", "Gauss's Law", "Lenz's Law"],
-    answer: "Conservation of Charge",
-    explanation: "Total charge in an isolated system remains constant."
+    "question": "A capacitor stores energy in the form of an electric ______.",
+    "options": ["Wave", "Field", "Shock", "Spark"],
+    "answer": "Field",
+    "topic": "Capacitance"
   },
   {
-    id: 45,
-    question: "The dipole moment points from ________ to ________.",
-    options: ["+ to -", "- to +", "North to South", "Center to Edge"],
-    answer: "- to +",
-    explanation: "By convention, the vector points from the negative to the positive charge."
+    "question": "Current flows from higher potential to ______ potential.",
+    "options": ["Equal", "Lower", "Infinite", "Negative"],
+    "answer": "Lower",
+    "topic": "Current"
   },
   {
-    id: 46,
-    question: "Conductance is the reciprocal of:",
-    options: ["Voltage", "Resistance", "Current", "Power"],
-    answer: "Resistance",
-    explanation: "Conductance (G) = 1 / R."
+    "question": "The opposition to current flow is called ______.",
+    "options": ["Voltage", "Resistance", "Capacitance", "Inductance"],
+    "answer": "Resistance",
+    "topic": "Resistance"
   },
   {
-    id: 47,
-    question: "A voltmeter is always connected in ________ with a component.",
-    options: ["Series", "Parallel", "A loop", "The ground"],
-    answer: "Parallel",
-    explanation: "To measure potential difference across two points."
+    "question": "A battery converts chemical energy into ______ energy.",
+    "options": ["Heat", "Electrical", "Nuclear", "Sound"],
+    "answer": "Electrical",
+    "topic": "Electromotive Force"
   },
   {
-    id: 48,
-    question: "Resistance increases as temperature increases in most:",
-    options: ["Insulators", "Semiconductors", "Metals", "Liquids"],
-    answer: "Metals",
-    explanation: "Atomic vibrations increase at higher temps, hindering electron flow."
+    "question": "One coulomb per second is equal to one ______.",
+    "options": ["Volt", "Ampere", "Ohm", "Farad"],
+    "answer": "Ampere",
+    "topic": "Current"
   },
   {
-    id: 49,
-    question: "What provides the energy to move charges in a circuit?",
-    options: ["Resistor", "Capacitor", "EMF source", "Ammeter"],
-    answer: "EMF source",
-    explanation: "Batteries or generators provide the electromotive force."
+    "question": "Which device stores electric charge?",
+    "options": ["Resistor", "Capacitor", "Transformer", "Inductor"],
+    "answer": "Capacitor",
+    "topic": "Capacitance"
   },
   {
-    id: 50,
-    question: "Electric potential energy is highest when two like charges are:",
-    options: ["Far apart", "Close together", "In a vacuum", "Moving fast"],
-    answer: "Close together",
-    explanation: "Because they repel, work must be done to force them closer."
+    "question": "The energy stored in a capacitor depends on its ______.",
+    "options": ["Resistance", "Capacitance", "Mass", "Shape"],
+    "answer": "Capacitance",
+    "topic": "Capacitance"
   },
   {
-    id: 1,
-    question: "What is the net electric flux through a closed surface if the net enclosed charge is doubled?",
-    options: ["Remains the same", "Doubles", "Is halved", "Becomes zero"],
-    answer: "Doubles",
-    explanation: "According to Gauss's Law, flux is directly proportional to the enclosed charge (Φ = Q/ε₀)."
+    "question": "The current in a circuit is measured using an ______.",
+    "options": ["Voltmeter", "Ammeter", "Thermometer", "Barometer"],
+    "answer": "Ammeter",
+    "topic": "Current"
   },
   {
-    id: 2,
-    question: "Which of the following is NOT a unit for Electric Potential?",
-    options: ["Volt", "Joule/Coulomb", "Newton-meter/Coulomb", "Newton/Coulomb"],
-    answer: "Newton/Coulomb",
-    explanation: "Newton/Coulomb is the unit for Electric Field strength, not Potential."
+    "question": "Voltage is measured using a ______.",
+    "options": ["Ammeter", "Voltmeter", "Galvanometer", "Micrometer"],
+    "answer": "Voltmeter",
+    "topic": "Electric Potential"
   },
   {
-    id: 3,
-    question: "Inside a hollow conducting sphere with charge Q, the electric potential is:",
-    options: ["Zero", "Constant and non-zero", "Varies with distance r", "Infinite"],
-    answer: "Constant and non-zero",
-    explanation: "While the field inside is zero, the potential is constant and equal to the value at the surface."
+    "question": "The resistance of a wire increases with ______.",
+    "options": ["Area", "Length", "Thickness", "Cooling"],
+    "answer": "Length",
+    "topic": "Resistance"
   },
   {
-    id: 4,
-    question: "The work done by an external force to move a charge q from potential V1 to V2 is:",
-    options: ["q(V2 - V1)", "q(V1 - V2)", "q / (V2 - V1)", "V2 - V1"],
-    answer: "q(V2 - V1)",
-    explanation: "Work done is equal to the charge multiplied by the change in potential."
+    "question": "Short, thick wires have ______ resistance.",
+    "options": ["High", "Low", "Infinite", "Zero"],
+    "answer": "Low",
+    "topic": "Resistance"
   },
   {
-    id: 5,
-    question: "Electric field lines point in the direction of ________ potential.",
-    options: ["Increasing", "Decreasing", "Constant", "Maximum"],
-    answer: "Decreasing",
-    explanation: "Positive charges naturally move from high potential to low potential along field lines."
+    "question": "The SI unit of resistivity is ______.",
+    "options": ["Ωm", "Ω", "A", "V"],
+    "answer": "Ωm",
+    "topic": "Resistivity"
   },
   {
-    id: 6,
-    question: "In Gauss’s Law, if a surface encloses an electric dipole, the net flux is:",
-    options: ["Positive", "Negative", "Zero", "Dependent on dipole orientation"],
-    answer: "Zero",
-    explanation: "A dipole consists of equal +q and -q charges; the net enclosed charge is zero."
+    "question": "Current is directly proportional to voltage according to ______.",
+    "options": ["Gauss’s law", "Ohm’s law", "Faraday’s law", "Newton’s law"],
+    "answer": "Ohm’s law",
+    "topic": "Resistance"
   },
   {
-    id: 7,
-    question: "What is the capacitance of a parallel-plate capacitor with plate area A and separation d?",
-    options: ["ε₀d / A", "ε₀A / d", "d / (ε₀A)", "A / (ε₀d)"],
-    answer: "ε₀A / d",
-    explanation: "Capacitance increases with area and decreases with the distance between plates."
+    "question": "Electric power can also be expressed as ______.",
+    "options": ["I²R", "V/R", "Q/t", "F/q"],
+    "answer": "I²R",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 8,
-    question: "The energy density of an electric field is proportional to:",
-    options: ["E", "E²", "1/E", "√E"],
-    answer: "E²",
-    explanation: "The energy per unit volume in an electric field is given by (1/2)ε₀E²."
+    "question": "The time rate of doing electrical work is called ______.",
+    "options": ["Resistance", "Power", "Current", "Charge"],
+    "answer": "Power",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 9,
-    question: "What happens to the capacitance when the distance between plates is halved?",
-    options: ["Halved", "Doubled", "Quartered", "Quadrupled"],
-    answer: "Doubled",
-    explanation: "Capacitance is inversely proportional to distance (d); halving d doubles C."
+    "question": "An electric dipole has a dipole ______.",
+    "options": ["Resistance", "Moment", "Current", "Pressure"],
+    "answer": "Moment",
+    "topic": "Electric Dipoles"
   },
   {
-    id: 10,
-    question: "Which law is most efficient for finding the field of an infinite line of charge?",
-    options: ["Coulomb's Law", "Ohm's Law", "Gauss's Law", "Kirchhoff's Law"],
-    answer: "Gauss's Law",
-    explanation: "Gauss's Law is ideal for systems with high cylindrical symmetry."
+    "question": "Field lines are closer where the electric field is ______.",
+    "options": ["Weak", "Strong", "Zero", "Neutral"],
+    "answer": "Strong",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 11,
-    question: "The potential at a point due to a point charge q at distance r is proportional to:",
-    options: ["1/r", "1/r²", "r", "r²"],
-    answer: "1/r",
-    explanation: "Electric potential follows a 1/r relationship, unlike the electric field which is 1/r²."
+    "question": "Electric potential energy is measured in ______.",
+    "options": ["Volt", "Joule", "Newton", "Ampere"],
+    "answer": "Joule",
+    "topic": "Electric Potential Energy"
   },
   {
-    id: 12,
-    question: "When two capacitors are in series, they both have the same:",
-    options: ["Voltage", "Capacitance", "Charge", "Energy"],
-    answer: "Charge",
-    explanation: "In a series circuit, the charge 'pushed' onto one plate must be balanced by the same charge on the next."
+    "question": "Capacitors in parallel have ______ capacitance.",
+    "options": ["Reduced", "Increased", "Zero", "Negative"],
+    "answer": "Increased",
+    "topic": "Capacitors in Series and Parallel"
   },
   {
-    id: 13,
-    question: "What is the unit of Electromotive Force (EMF)?",
-    options: ["Newton", "Joule", "Volt", "Ampere"],
-    answer: "Volt",
-    explanation: "EMF is a potential difference, which is measured in Volts."
+    "question": "A dielectric increases the ______ of a capacitor.",
+    "options": ["Resistance", "Capacitance", "Current", "Voltage"],
+    "answer": "Capacitance",
+    "topic": "Dielectrics"
   },
   {
-    id: 14,
-    question: "Resistance (R) of a wire is related to resistivity (ρ) by:",
-    options: ["R = ρA/L", "R = ρL/A", "R = A/(ρL)", "R = L/(ρA)"],
-    answer: "R = ρL/A",
-    explanation: "Resistance increases with length and decreases with cross-sectional area."
+    "question": "Current in a metallic conductor is due to drift of ______.",
+    "options": ["Neutrons", "Electrons", "Protons", "Ions"],
+    "answer": "Electrons",
+    "topic": "Current"
   },
   {
-    id: 15,
-    question: "Kirchhoff's Junction Rule is a statement of conservation of:",
-    options: ["Energy", "Momentum", "Charge", "Mass"],
-    answer: "Charge",
-    explanation: "Current entering a junction must equal current leaving (charge cannot vanish)."
+    "question": "A resistor converts electrical energy into ______ energy.",
+    "options": ["Heat", "Nuclear", "Mechanical", "Chemical"],
+    "answer": "Heat",
+    "topic": "Resistance"
   },
   {
-    id: 16,
-    question: "Kirchhoff's Loop Rule is a statement of conservation of:",
-    options: ["Energy", "Charge", "Power", "Voltage"],
-    answer: "Energy",
-    explanation: "The sum of potential changes around a closed loop must be zero (conservation of energy)."
+    "question": "The direction of conventional current is opposite to electron ______.",
+    "options": ["Flow", "Mass", "Force", "Potential"],
+    "answer": "Flow",
+    "topic": "Current"
   },
   {
-    id: 17,
-    question: "Internal resistance in a battery causes the terminal voltage to be ________ than the EMF.",
-    options: ["Higher", "Lower", "Equal", "Double"],
-    answer: "Lower",
-    explanation: "V = EMF - Ir; the internal drop (Ir) reduces the voltage available to the circuit."
+    "question": "Electric field strength depends on the source ______.",
+    "options": ["Charge", "Temperature", "Mass", "Density"],
+    "answer": "Charge",
+    "topic": "Electric Field"
   },
   {
-    id: 18,
-    question: "A dielectric ________ the electric field strength inside a capacitor.",
-    options: ["Increases", "Decreases", "Maintains", "Polarizes to zero"],
-    answer: "Decreases",
-    explanation: "The induced field in the dielectric opposes and weakens the original field."
+    "question": "The path followed by positive test charge is along the ______.",
+    "options": ["Current", "Field line", "Resistance", "Potential"],
+    "answer": "Field line",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 19,
-    question: "What is the unit of Electric Current Density (J)?",
-    options: ["A/m", "A/m²", "C/m²", "V/m"],
-    answer: "A/m²",
-    explanation: "Current density is current (A) per unit area (m²)."
+    "question": "The electric force between two charges is inversely proportional to ______.",
+    "options": ["Distance", "Square of distance", "Mass", "Current"],
+    "answer": "Square of distance",
+    "topic": "Electric Forces"
   },
   {
-    id: 20,
-    question: "If a material's resistance increases as temperature decreases, it is likely a:",
-    options: ["Metal", "Conductor", "Semiconductor", "Superconductor"],
-    answer: "Semiconductor",
-    explanation: "Semiconductors have a negative temperature coefficient of resistance."
+    "question": "The formula Q = CV relates charge, capacitance and ______.",
+    "options": ["Resistance", "Voltage", "Current", "Power"],
+    "answer": "Voltage",
+    "topic": "Capacitance"
   },
   {
-    id: 21,
-    question: "The power dissipated in a resistor is proportional to the ________ of the current.",
-    options: ["Square root", "Square", "Cube", "Reciprocal"],
-    answer: "Square",
-    explanation: "P = I²R; doubling the current quadruples the power."
+    "question": "Potential difference causes electric ______.",
+    "options": ["Resistance", "Current", "Mass", "Pressure"],
+    "answer": "Current",
+    "topic": "Current"
   },
   {
-    id: 22,
-    question: "In an isolated capacitor, if the plate area is increased, the potential difference:",
-    options: ["Increases", "Decreases", "Stays the same", "Becomes zero"],
-    answer: "Decreases",
-    explanation: "C increases with area; since V = Q/C and Q is constant, V must decrease."
+    "question": "A perfect conductor has very ______ resistance.",
+    "options": ["High", "Low", "Infinite", "Variable"],
+    "answer": "Low",
+    "topic": "Conductors and Insulators"
   },
   {
-    id: 23,
-    question: "Which instrument is used to measure potential difference without drawing current?",
-    options: ["Ammeter", "Potentiometer", "Ohmeter", "Galvanometer"],
-    answer: "Potentiometer",
-    explanation: "An ideal potentiometer measures voltage at a 'null point' where no current flows."
+    "question": "Electrostatic force is a type of ______ force.",
+    "options": ["Contact", "Non-contact", "Frictional", "Magnetic only"],
+    "answer": "Non-contact",
+    "topic": "Electric Forces"
   },
   {
-    id: 24,
-    question: "Surface charge density (σ) is defined as:",
-    options: ["Charge / Volume", "Charge / Area", "Charge / Length", "Force / Area"],
-    answer: "Charge / Area",
-    explanation: "σ represents the distribution of charge over a surface."
+    "question": "An equipotential surface requires ______ work to move a charge along it.",
+    "options": ["Maximum", "No", "Infinite", "Extra"],
+    "answer": "No",
+    "topic": "Equipotential Surfaces"
   },
   {
-    id: 25,
-    question: "The electric field just outside a charged conductor is ________ to the surface.",
-    options: ["Parallel", "Perpendicular", "At 45 degrees", "Circular"],
-    answer: "Perpendicular",
-    explanation: "Any parallel component would cause charges to move on the surface."
+    "question": "The terminal through which current leaves a cell is the ______ terminal.",
+    "options": ["Negative", "Positive", "Neutral", "Ground"],
+    "answer": "Positive",
+    "topic": "Electromotive Force"
   },
   {
-    id: 26,
-    question: "Which of the following describes the torque on a dipole (p) in a field (E)?",
-    options: ["p + E", "p / E", "p × E", "p · E"],
-    answer: "p × E",
-    explanation: "Torque is a vector product (cross product) of the dipole moment and the field."
+    "question": "The work done in moving a unit positive charge is called electric ______.",
+    "options": ["Resistance", "Potential", "Current", "Power"],
+    "answer": "Potential",
+    "topic": "Electric Potential"
   },
   {
-    id: 27,
-    question: "The potential energy of a dipole is minimum when it is ________ with the field.",
-    options: ["Perpendicular", "Aligned", "Anti-aligned", "At 45 degrees"],
-    answer: "Aligned",
-    explanation: "Potential energy U = -p · E; it is lowest (-pE) when aligned."
+    "question": "Charges redistribute themselves on conductors until electrostatic equilibrium is reached because electrons are ______.",
+    "options": ["Fixed", "Mobile", "Heavy", "Neutral"],
+    "answer": "Mobile",
+    "topic": "Conductors and Insulators"
   },
   {
-    id: 28,
-    question: "What is the equivalent resistance of two identical resistors R in parallel?",
-    options: ["2R", "R", "R/2", "R²"],
-    answer: "R/2",
-    explanation: "The parallel formula yields R/n for n identical resistors."
+    "question": "In a series circuit, current is ______ at all points.",
+    "options": ["Different", "Equal", "Zero", "Alternating"],
+    "answer": "Equal",
+    "topic": "Resistance"
   },
   {
-    id: 29,
-    question: "What is the equivalent resistance of two identical resistors R in series?",
-    options: ["2R", "R", "R/2", "R²"],
-    answer: "2R",
-    explanation: "Resistances simply add up in a series connection."
+    "question": "Parallel circuits have the same ______ across each branch.",
+    "options": ["Current", "Voltage", "Resistance", "Power"],
+    "answer": "Voltage",
+    "topic": "Resistance"
   },
   {
-    id: 30,
-    question: "Electric potential energy is a ________ quantity.",
-    options: ["Vector", "Scalar", "Directional", "Imaginary"],
-    answer: "Scalar",
-    explanation: "Energy is a scalar value measured in Joules."
+    "question": "Which quantity is measured in volts?",
+    "options": ["Current", "Resistance", "Potential difference", "Charge"],
+    "answer": "Potential difference",
+    "topic": "Electric Potential"
   },
   {
-    id: 31,
-    question: "The 'electron volt' (eV) is a unit of:",
-    options: ["Voltage", "Charge", "Energy", "Power"],
-    answer: "Energy",
-    explanation: "One eV is the energy gained by an electron moving through 1 Volt."
+    "question": "The ability of a material to oppose current flow is called ______.",
+    "options": ["Conductivity", "Resistance", "Capacitance", "Induction"],
+    "answer": "Resistance",
+    "topic": "Resistance"
   },
   {
-    id: 32,
-    question: "A farad is equivalent to:",
-    options: ["Coulomb/Volt", "Volt/Coulomb", "Joule/Coulomb", "Ampere/Volt"],
-    answer: "Coulomb/Volt",
-    explanation: "C = Q / V."
+    "question": "A capacitor consists of two conductors separated by a(n) ______.",
+    "options": ["Insulator", "Battery", "Magnet", "Motor"],
+    "answer": "Insulator",
+    "topic": "Capacitance"
   },
   {
-    id: 33,
-    question: "Ohmic materials are those where resistance ________ as voltage changes.",
-    options: ["Increases", "Decreases", "Stays constant", "Doubles"],
-    answer: "Stays constant",
-    explanation: "For Ohmic conductors, the V-I graph is a straight line."
+    "question": "The electric field inside a conductor at electrostatic equilibrium is ______.",
+    "options": ["Strong", "Zero", "Infinite", "Negative"],
+    "answer": "Zero",
+    "topic": "Electric Field"
   },
   {
-    id: 34,
-    question: "The resistivity of a conductor generally ________ with increasing temperature.",
-    options: ["Increases", "Decreases", "Stays same", "Becomes zero"],
-    answer: "Increases",
-    explanation: "Increased thermal vibration of atoms increases the collision rate of electrons."
+    "question": "The more field lines per area, the ______ the electric field.",
+    "options": ["Weaker", "Stronger", "Slower", "Lower"],
+    "answer": "Stronger",
+    "topic": "Electric Field Lines"
   },
   {
-    id: 35,
-    question: "What is the charge stored in a 5μF capacitor at 10V?",
-    options: ["0.5μC", "5μC", "50μC", "500μC"],
-    answer: "50μC",
-    explanation: "Q = C * V = 5μF * 10V = 50μC."
+    "question": "Electrical energy consumed is commonly measured in ______.",
+    "options": ["kWh", "Ampere", "Volt", "Tesla"],
+    "answer": "kWh",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 36,
-    question: "Gauss's Law relates flux to the ________ charge.",
-    options: ["Total", "Surface", "Net enclosed", "External"],
-    answer: "Net enclosed",
-    explanation: "Charges outside the Gaussian surface contribute zero to the net flux."
+    "question": "The relation between charge, current and time is ______.",
+    "options": ["Q = It", "V = IR", "P = VI", "E = F/q"],
+    "answer": "Q = It",
+    "topic": "Current"
   },
   {
-    id: 37,
-    question: "The electric field of an infinite charged plane is:",
-    options: ["σ / ε₀", "σ / (2ε₀)", "Q / (4πε₀r²)", "Zero"],
-    answer: "σ / (2ε₀)",
-    explanation: "The field is uniform and independent of the distance from the plane."
+    "question": "A charged object attracts small neutral objects due to ______.",
+    "options": ["Induction", "Fusion", "Radiation", "Compression"],
+    "answer": "Induction",
+    "topic": "Charging by Induction"
   },
   {
-    id: 38,
-    question: "The potential difference across a resistor in a circuit is called:",
-    options: ["EMF", "Voltage Drop", "Current density", "Resistivity"],
-    answer: "Voltage Drop",
-    explanation: "It represents the energy 'lost' per charge passing through the resistor."
+    "question": "The electric field of a dipole decreases rapidly with ______.",
+    "options": ["Charge", "Distance", "Mass", "Current"],
+    "answer": "Distance",
+    "topic": "Field of an Electric Dipole"
   },
   {
-    id: 39,
-    question: "Two capacitors C1 and C2 in series have an equivalent capacitance of:",
-    options: ["C1 + C2", "(C1*C2)/(C1+C2)", "C1 / C2", "√(C1*C2)"],
-    answer: "(C1*C2)/(C1+C2)",
-    explanation: "This is the 'product over sum' shortcut for two capacitors in series."
+    "question": "Capacitors are commonly used for storing ______.",
+    "options": ["Heat", "Electric charge", "Magnetic force", "Mass"],
+    "answer": "Electric charge",
+    "topic": "Capacitance"
   },
   {
-    id: 40,
-    question: "Energy stored in a capacitor can be calculated as:",
-    options: ["1/2 CV²", "1/2 QV", "Q² / 2C", "All of the above"],
-    answer: "All of the above",
-    explanation: "All these formulas are derived from work done to charge the capacitor."
+    "question": "Electrical resistance produces heating known as ______ heating.",
+    "options": ["Faraday", "Joule", "Newton", "Gauss"],
+    "answer": "Joule",
+    "topic": "Energy and Power in Electric Circuits"
   },
   {
-    id: 41,
-    question: "A material with a very large dielectric constant (κ) is a good ________.",
-    options: ["Conductor", "Resistor", "Insulator", "Semiconductor"],
-    answer: "Insulator",
-    explanation: "Dielectrics must be insulators to prevent current flow between plates."
+    "question": "The electric potential at infinity is usually taken as ______.",
+    "options": ["1", "100", "Zero", "Infinite"],
+    "answer": "Zero",
+    "topic": "Electric Potential"
   },
   {
-    id: 42,
-    question: "The slope of a Potential (V) vs. Distance (r) graph represents:",
-    options: ["Charge", "Capacitance", "Electric Field", "Energy"],
-    answer: "Electric Field",
-    explanation: "E = -dV/dr; the field is the negative gradient of the potential."
+    "question": "Electrons move from ______ potential to higher potential.",
+    "options": ["Higher", "Lower", "Equal", "Infinite"],
+    "answer": "Lower",
+    "topic": "Current"
   },
   {
-    id: 43,
-    question: "If an object is grounded, it can be considered a source or sink of:",
-    options: ["Voltage", "Electrons", "Protons", "Neutrons"],
-    answer: "Electrons",
-    explanation: "Grounding allows electrons to move to or from the earth to neutralize an object."
+    "question": "The total resistance in series is the ______ of individual resistances.",
+    "options": ["Difference", "Product", "Sum", "Ratio"],
+    "answer": "Sum",
+    "topic": "Resistance"
   },
   {
-    id: 44,
-    question: "The unit of conductivity is:",
-    options: ["Ohm-meter", "(Ohm-meter)⁻¹", "Volt/meter", "Ampere/meter"],
-    answer: "(Ohm-meter)⁻¹",
-    explanation: "Conductivity is the reciprocal of resistivity."
+    "question": "In parallel connection, equivalent resistance is ______ than the smallest resistor.",
+    "options": ["Greater", "Less", "Equal", "Twice"],
+    "answer": "Less",
+    "topic": "Resistance"
   },
   {
-    id: 45,
-    question: "The drift velocity (v_d) is directly proportional to the:",
-    options: ["Resistivity", "Electric Field (E)", "Length", "Potential energy"],
-    answer: "Electric Field (E)",
-    explanation: "v_d = μE, where μ is the mobility of the charge carriers."
+    "question": "The force on a charge in an electric field depends on the ______ of the charge.",
+    "options": ["Sign", "Color", "Mass", "Density"],
+    "answer": "Sign",
+    "topic": "Electric Forces"
   },
   {
-    id: 46,
-    question: "A capacitor blocks ________ current once fully charged.",
-    options: ["Alternating (AC)", "Direct (DC)", "High voltage", "Magnetic"],
-    answer: "Direct (DC)",
-    explanation: "In a DC circuit, a charged capacitor acts as an open circuit."
+    "question": "Electric field intensity is greatest near ______ charges.",
+    "options": ["Small", "Large", "Neutral", "Insulated"],
+    "answer": "Large",
+    "topic": "Electric Field"
   },
   {
-    id: 47,
-    question: "Total potential of several point charges is the ________ sum of their potentials.",
-    options: ["Vector", "Algebraic", "Cross product", "Geometric"],
-    answer: "Algebraic",
-    explanation: "Because potential is a scalar, we just add the numbers (including signs)."
+    "question": "Potential difference is also called ______.",
+    "options": ["Resistance", "Voltage", "Power", "Current"],
+    "answer": "Voltage",
+    "topic": "Electric Potential"
   },
   {
-    id: 48,
-    question: "The electric field inside a non-conducting sphere with uniform charge density:",
-    options: ["Is zero", "Increases linearly with r", "Decreases with 1/r²", "Is constant"],
-    answer: "Increases linearly with r",
-    explanation: "According to Gauss's Law, the enclosed charge increases with r³ while area is r²."
+    "question": "An ideal voltmeter has very ______ resistance.",
+    "options": ["Low", "High", "Zero", "Negative"],
+    "answer": "High",
+    "topic": "Resistance"
   },
   {
-    id: 49,
-    question: "Power (P) can also be written in terms of Voltage (V) and Resistance (R) as:",
-    options: ["V/R", "V²R", "V²/R", "R/V²"],
-    answer: "V²/R",
-    explanation: "P = VI and I = V/R, so P = V(V/R) = V²/R."
+    "question": "An ideal ammeter has very ______ resistance.",
+    "options": ["High", "Infinite", "Low", "Variable"],
+    "answer": "Low",
+    "topic": "Resistance"
   },
   {
-    id: 50,
-    question: "The term 'potential difference' implies a difference in:",
-    options: ["Force", "Current", "Electrical Pressure", "Charge density"],
-    answer: "Electrical Pressure",
-    explanation: "Voltage is often described as electrical pressure that drives current."
+    "question": "The ability of a material to conduct electricity is called ______.",
+    "options": ["Conductivity", "Capacitance", "Potential", "Inductance"],
+    "answer": "Conductivity",
+    "topic": "Conductors and Insulators"
+  },
+  {
+    "question": "Electric charges are conserved according to the law of conservation of ______.",
+    "options": ["Mass", "Charge", "Force", "Power"],
+    "answer": "Charge",
+    "topic": "Electric Charges"
+  },
+  {
+    "question": "A neutral object has ______ net charge.",
+    "options": ["Positive", "Negative", "Zero", "Infinite"],
+    "answer": "Zero",
+    "topic": "Electric Charges"
+  },
+  {
+    "question": "Static electricity refers to charges at ______.",
+    "options": ["Rest", "High speed", "High temperature", "Motion only"],
+    "answer": "Rest",
+    "topic": "Electric Charges"
+  },
+  {
+    "question": "The source of electric energy in a circuit is usually a ______.",
+    "options": ["Capacitor", "Battery", "Resistor", "Switch"],
+    "answer": "Battery",
+    "topic": "Electromotive Force"
+  },
+  {
+    "question": "The electric field direction is defined as the direction of force on a ______ charge.",
+    "options": ["Positive", "Negative", "Neutral", "Large"],
+    "answer": "Positive",
+    "topic": "Electric Field"
   }
-];
+]
+
