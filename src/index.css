@@ -759,8 +759,14 @@ body{
     border-radius: 14px;
 }
 .form button{
-    height: 30px;
-    background: ;
+    height: 40px;
+    background: linear-gradient( to right ,var(--accent), var(--accent2));
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+}
+.form button:hover{
+    background: #9e99ff;
 }
 .form input:hover{
     border-color: rgba(108, 99, 255, 0.45);
@@ -1183,4 +1189,8 @@ body{
   .profile-title {
     font-size: 1.5rem;
   }
+}
+.sign h1{
+    font-family: outfit;
+    font-size: 2.3rem;
 }

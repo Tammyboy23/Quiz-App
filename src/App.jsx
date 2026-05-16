@@ -5,6 +5,7 @@ import NavBar from "./Pages/NavBar";
 import Explore from "./Pages/Explore";
 import Sign from "./Pages/SignUp";
 import Profile from "./Pages/Profile";
+import Create from "./Pages/Create";
 
 function App(){
     return(
@@ -19,6 +20,7 @@ function App(){
             <Route path="/quiz/:id" element={<Page/>}/>
             <Route path="/signup" element={<Sign/>}/>
             <Route path="/profile" element={<Profile />}/>
+            <Route path="/create" element={<Create />} />
         </Routes>
         </main>
         </div>
