@@ -357,6 +357,7 @@ body{
 @media (max-width: 900px) {
   .layout {
     flex-direction: column;
+    margin-left: 0;
   }
 
   .nav {
@@ -580,6 +581,11 @@ body{
     min-height: 100vh;
     background: radial-gradient(circle at top, rgba(108, 99, 255, 0.14), transparent 35%),
       linear-gradient(180deg, #060609 0%, #0b0b12 100%);
+    margin-left: 260px;
+}
+
+.layout.quiz-active {
+    margin-left: 0;
 }
 .nav{
     display: flex;
@@ -591,6 +597,16 @@ body{
     flex-direction: column;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
     border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.nav.hidden {
+    display: none;
 }
 .logo{
     margin-top: 10px;

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import Top from "./top";
 
 function Create(){
     const [mode, setmode] = useState("");
     return(
         <>
+        <Top />
         <div className="create">
             <div className="create-box">
         {mode === "" ? (

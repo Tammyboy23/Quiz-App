@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import prof from "../assets/prof.jpg";
 import { Link } from "react-router-dom";
 
 function Top() {
@@ -17,7 +17,7 @@ function Top() {
         {loggedIn ? (
           <Link to="/profile">
             <div className="profile-top">
-              <img src={avatar || logo} alt="Profile" />
+              <img src={avatar || prof } alt="Profile" />
             </div>
           </Link>
         ) : (
