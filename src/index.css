@@ -785,7 +785,7 @@ body{
     gap: 24px;
     padding: 28px 0;
 }
-.quiz{
+.quizy{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -798,21 +798,21 @@ body{
     min-height: 220px;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
-.quiz:hover{
+.quizy:hover{
     transform: translateY(-2px);
     border-color: rgba(108, 99, 255, 0.35);
 }
-.quiz h1{
+.quizy h1{
     margin-bottom: 10px;
     font-size: 1.4rem;
     letter-spacing: -0.02em;
 }
-.quiz p{
+.quizy p{
     color: var(--muted);
     line-height: 1.6;
     margin-bottom: 14px;
 }
-.quiz button{
+.quizy button{
     margin-top: auto;
     padding: 12px 18px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -823,7 +823,7 @@ body{
     font-size: 1rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.quiz button:hover{
+.quizy button:hover{
     transform: translateY(-1px);
     box-shadow: 0 12px 22px rgba(108, 99, 255, 0.25);
 }
@@ -1193,4 +1193,13 @@ body{
 .sign h1{
     font-family: outfit;
     font-size: 2.3rem;
+}
+.create-box{
+  display: flex;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  width: fit-content;
+  margin: 60px auto;
+  flex-direction: column;
+  border-radius: 12px;
 }

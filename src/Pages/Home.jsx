@@ -2,6 +2,7 @@ import Top from "./top";
 
 function Home(){
     const user = localStorage.getItem("username");
+    const average = localStorage.getItem("average");
     return(
         <>
         <Top/>
@@ -10,7 +11,7 @@ function Home(){
             <h2>Welcome {user || "Guest"} 👋 </h2>
         </div>
         <div className="dashboards">
-            <div className="board"></div>
+            <div className="board">{average}</div>
             <div className="board"></div>
             <div className="board"></div>
             <div className="board"></div>

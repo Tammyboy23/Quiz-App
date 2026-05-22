@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import Top from "./top";
-import NavBar from "./NavBar";
 
 function Profile() {
   const [username, setUsername] = useState(localStorage.getItem("username") || "Anonymous");

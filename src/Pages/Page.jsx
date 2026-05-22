@@ -145,6 +145,8 @@ function Page() {
       clearInterval(countdownTimerRef.current);
       countdownTimerRef.current = null;
     }
+    const average = Math.round((score / quizToShow.length) * 100);
+    localStorage.setItem("average" , average);
   }
 
   function nextQuestion() {
@@ -261,6 +263,7 @@ function Page() {
                 </button>
               ))}
             </div>
+            {/**ASSIST IN THE ANSWERS TO THE QUESTIONS */}
             {assist && <div className="assist">Ans: {currentQuiz.answer}</div>}
             <div className="btm">
               <div className="button-group">
@@ -274,6 +277,7 @@ function Page() {
             </div>
           </div>
         ) : (
+          /**End SCREEN THAT DISPLATS SCORE  */
           <div className="screen">
             <h2>Quiz Complete! 🎉</h2>
             <h2>
