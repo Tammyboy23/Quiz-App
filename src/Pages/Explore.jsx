@@ -11,6 +11,7 @@ function Explore() {
         <div className="quizes">
           {quizes.map((quiz) => (
             <div className="quizy" key={quiz.quiz}>
+              <img src={quiz.img} alt="" />
               <h1>{quiz.name}</h1>
               <p>{quiz.desc}</p>
               <Link to={`/quiz/${quiz.quiz}`}>

@@ -22,7 +22,7 @@ function Create(){
                 </div>
         ) : (
             <div className="second">
-                <button onClick={() => setmode("")}>Back</button>
+                <button onClick={() => setmode("")} className="back">Back</button>
                 {mode === "Text" ? (
                     <div className="written">
 

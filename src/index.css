@@ -804,7 +804,7 @@ body{
 }
 .quizes{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 24px;
     padding: 28px 0;
 }
@@ -813,6 +813,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     gap: 18px;
+    font-family: outfit, sans-serif;
     padding: 28px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -824,6 +825,9 @@ body{
 .quizy:hover{
     transform: translateY(-2px);
     border-color: rgba(108, 99, 255, 0.35);
+}
+.quizy img{
+  width: 100px;
 }
 .quizy h1{
     margin-bottom: 10px;
@@ -1232,4 +1236,36 @@ body{
   margin: 60px auto;
   flex-direction: column;
   border-radius: 12px;
+  font-family: outfit, sans-serif;  
+}
+.first{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 24px;
+}
+.first select{
+  appearance: base-select;
+  padding: 10px;
+  background: rgb(46, 46, 46);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+}
+.first select::picker-icon{
+  transition: 0.3s ease;
+}
+.first select:open::picker-icon{
+  rotate: 180deg;
+}
+.first select option{
+  border: 3px solid #ff0000;
+  border-radius: 12px;
+}
+.back{
+  padding: 10px;
+  font-size: 1.2rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 13px;
 }
