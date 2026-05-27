@@ -63,10 +63,10 @@ body{
     padding: 40px 50px;
 }
 @media(max-width: 450px){
-    .app{
-        max-width: 200px;
-        margin: 500px auto;
-    }
+  .app{
+    max-width: 200px;
+    margin: 50px auto;
+  }
 }
 .buttons{
     display: flex;
@@ -587,6 +587,13 @@ body{
 .layout.quiz-active {
     margin-left: 0;
 }
+
+/* Ensure mobile doesn't inherit the desktop sidebar margin (placed after .layout) */
+@media (max-width: 900px) {
+  .layout {
+    margin-left: 0;
+  }
+}
 .nav{
     display: flex;
     width: 260px;
@@ -972,11 +979,18 @@ body{
   .burger-btn {
     display: flex;
   }
+  /* Keep overlay hidden by default; show only when drawer is opened via JS */
   .drawer-overlay {
-    display: block;
+    display: none;
   }
+  /* Drawer exists on mobile but is offscreen until `.drawer-open` toggles it */
   .drawer {
     display: flex;
+  }
+  /* Show overlay when JS adds an explicit open class */
+  .drawer-open ~ .drawer-overlay,
+  .drawer-overlay.open {
+    display: block;
   }
   /* Hide permanent sidebar on mobile */
   .nav {
