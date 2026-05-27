@@ -5,7 +5,7 @@ import { quiz3 } from "./Quiz3"
 export const quizes = [
     {
         name: "Physics",
-        img: "https://www.svgrepo.com/show/200978/physics.svg",
+        img: "https://www.svgrepo.com/show/288275/physics-science.svg",
         desc: "Physics is a subject involving the physical world",
         length: quiz1.length,
         quiz: "quiz1",
