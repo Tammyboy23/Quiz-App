@@ -8,7 +8,7 @@ const quizMap = {
   quiz2,
 };
 
-function Page() {
+function Page({ onQuizModeChange }) {
   const { id } = useParams();
   const quiz = quizMap[id];
 
@@ -85,6 +85,18 @@ function Page() {
     };
   }, [quizStarted, fullscreenWarning, mode]);
 
+  useEffect(() => {
+    if (typeof onQuizModeChange === "function") {
+      onQuizModeChange(quizStarted);
+    }
+
+    return () => {
+      if (typeof onQuizModeChange === "function") {
+        onQuizModeChange(false);
+      }
+    };
+  }, [quizStarted, onQuizModeChange]);
+
   if (!quiz) {
     return (
       <div className="app">
@@ -147,6 +159,25 @@ function Page() {
     }
     const average = Math.round((score / quizToShow.length) * 100);
     localStorage.setItem("average" , average);
+  }
+
+  function quitQuiz() {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    setQuizStarted(false);
+    setcurrentQuestion(0);
+    setscore(0);
+    setAnswered(false);
+    setSelectedAnswer(null);
+    setassist(false);
+    setFullscreenWarning(false);
+    setQuizCancelled(false);
+    setTimeLeft(30);
+    if (countdownTimerRef.current) {
+      clearInterval(countdownTimerRef.current);
+      countdownTimerRef.current = null;
+    }
   }
 
   function nextQuestion() {
@@ -274,6 +305,9 @@ function Page() {
                   {currentQuestion < quizToShow.length - 1 ? "Next" : "Submit"}
                 </button>
               </div>
+              <button className="quit-btn" onClick={quitQuiz}>
+                Quit Quiz
+              </button>
             </div>
           </div>
         ) : (

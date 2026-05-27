@@ -11,7 +11,7 @@ function Home(){
             <h2>Welcome {user || "Guest"} 👋 </h2>
         </div>
         <div className="dashboards">
-            <div className="board"></div>
+            <div className="board">{average}Average</div>
             <div className="board"></div>
             <div className="board"></div>
             <div className="board"></div>

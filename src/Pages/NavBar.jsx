@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaUser, FaQq } from "react-icons/fa";
 import { LuCompass, LuPlus, LuX, LuMenu } from "react-icons/lu";
 
-function NavBar() {
+function NavBar({ hidden }) {
   const [open, setOpen] = useState(false);
   const drawerRef = useRef(null);
   const location = useLocation();
@@ -16,8 +16,10 @@ function NavBar() {
 
   // Close drawer on route change
   useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
+    if (open) {
+      setOpen(false);
+    }
+  }, [location.pathname, open]);
 
   // Close drawer on outside click
   useEffect(() => {
@@ -41,6 +43,10 @@ function NavBar() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  if (hidden) {
+    return null;
+  }
 
   const navLinks = (
     <div className="list">
