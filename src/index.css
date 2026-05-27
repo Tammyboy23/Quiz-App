@@ -1034,6 +1034,9 @@ body{
   .nav {
     display: none;
   }
+  .quizes{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ── Profile page ── */
