@@ -141,7 +141,7 @@ function Page({ onQuizModeChange }) {
 
   function restart() {
     const finalScore = score;
-    const total = quizToShow.length;
+    const total = quizToShow.length;  
     localStorage.setItem("average", Math.round((finalScore / total) * 100));
 
     setQuizStarted(false);

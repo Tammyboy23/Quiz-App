@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaUser, FaQq } from "react-icons/fa";
-import { LuCompass, LuPlus, LuX, LuMenu } from "react-icons/lu";
+import { LuCompass, LuPlus, LuX, LuMenu , LuFilePenLine} from "react-icons/lu";
+import { MdDashboard } from "react-icons/md";
 
 function NavBar({ hidden }) {
   const [open, setOpen] = useState(false);
@@ -40,9 +41,9 @@ function NavBar({ hidden }) {
 
   const navLinks = (
     <div className="list">
-      <Link to="/" onClick={() => setOpen(false)}><FaHome /> Dashboard</Link>
+      <Link to="/" onClick={() => setOpen(false)}><MdDashboard /> Dashboard</Link>
       <Link to="/explore" onClick={() => setOpen(false)}><LuCompass /> Explore</Link>
-      <Link to="/create" onClick={() => setOpen(false)}><LuPlus /> Create Quiz</Link>
+      <Link to="/create" onClick={() => setOpen(false)}><LuFilePenLine /> Create Quiz</Link>
       <Link to="/profile" onClick={() => setOpen(false)}><FaUser /> Profile</Link>
     </div>
   );
