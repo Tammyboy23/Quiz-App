@@ -14,7 +14,7 @@ function Home(){
         <div className="dashboards">
             <div className="board">
                 <h3>Average</h3>
-                <h1>{average}</h1>
+                <h1>{average}%</h1>
                 <span><FaChartLine/></span>
             </div>
             <div className="board"></div>
