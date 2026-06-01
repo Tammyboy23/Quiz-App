@@ -19,6 +19,14 @@ function Home(){
                 <h1>{average}</h1>
                 <span><FaChartLine/></span>
             </div>
+            <div className="board">
+                <h3>Streaks</h3>
+                <h1><FaFire size={30} color="red"/>Days</h1>
+            </div>
+            <div className="board">
+                <h3>Duration</h3>
+                <h1><FaClockRotateLeft/></h1>
+            </div>
             <div className="board"></div>
         </div>
         </div>
