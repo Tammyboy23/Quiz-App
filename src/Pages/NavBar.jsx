@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaHome, FaUser, FaQq } from "react-icons/fa";
-import { LuCompass, LuPlus, LuX, LuMenu , LuFilePenLine} from "react-icons/lu";
+import {  FaUser, FaQq } from "react-icons/fa";
+import { LuCompass,  LuX, LuMenu , LuFilePenLine} from "react-icons/lu";
 import { MdDashboard } from "react-icons/md";
 
 function NavBar({ hidden }) {
