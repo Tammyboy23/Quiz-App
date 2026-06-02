@@ -1330,4 +1330,16 @@ body{
   padding: 4px 13px;
   text-align: center;
   border-radius: 12px;
+  color: hsl(0, 93%, 61%);
+}
+@media(max-width: 900px){
+  .board{
+    padding: 20px;
+  }
+  .board-top{
+    gap: 12px;
+  }
+  .board-top span{
+    padding: 5px 13px;
+  }
 }

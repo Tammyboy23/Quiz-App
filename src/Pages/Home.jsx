@@ -18,7 +18,7 @@ function Home(){
                 <div className="board-top"><h3>Average</h3><span style={{
                     background: 'hsl(204, 100%, 83%)',
                 }}><FaChartLine size="20" color="blue" /></span></div>
-                <h1>{average}</h1>
+                <h1>{average}%</h1>
             </div>
             <div className="board">
                 <div className="board-top"><h3>Streaks</h3> <span style={{
