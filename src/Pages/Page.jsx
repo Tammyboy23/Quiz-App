@@ -15,6 +15,13 @@ function Page({ onQuizModeChange }) {
   const [quizStarted, setQuizStarted] = useState(false);
   const appRef = useRef(null);
 
+  const [quizlist, setquizlist] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("quizScores") || "[]");
+    } catch {
+      return [];
+    }
+  });
   const [mode, setMode] = useState("practice");
   const [selectedQuestions, setSelectedQuestions] = useState(quiz ? quiz.length : 0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -141,8 +148,17 @@ function Page({ onQuizModeChange }) {
 
   function restart() {
     const finalScore = score;
-    const total = quizToShow.length;  
-    localStorage.setItem("average", Math.round((finalScore / total) * 100));
+    const total = quizToShow.length;
+    const percentScore = total ? Math.round((finalScore / total) * 100) : 0;
+    const updatedQuizList = [...quizlist, percentScore];
+    setquizlist(updatedQuizList);
+
+    const averagePercent = updatedQuizList.length
+      ? Math.round(updatedQuizList.reduce((sum, item) => sum + item, 0) / updatedQuizList.length)
+      : 0;
+
+    localStorage.setItem("quizScores", JSON.stringify(updatedQuizList));
+    localStorage.setItem("average", averagePercent.toString());
 
     setQuizStarted(false);
     setCurrentQuestion(0);

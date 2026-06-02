@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import {  FaUser, FaQq } from "react-icons/fa";
 import { LuCompass,  LuX, LuMenu , LuFilePenLine} from "react-icons/lu";
 import { MdDashboard } from "react-icons/md";
+import { AiOutlineBulb } from "react-icons/ai";
 
 function NavBar({ hidden }) {
   const [open, setOpen] = useState(false);
@@ -59,7 +60,7 @@ function NavBar({ hidden }) {
       <div className={`drawer ${open ? "drawer-open" : ""}`} ref={drawerRef}>
         <div className="drawer-header">
           <div className="logo">
-            <h1><FaQq /> QUIZORA</h1>
+            <h1><AiOutlineBulb /> QUIZORA</h1>
           </div>
           <button className="drawer-close" onClick={() => setOpen(false)} aria-label="Close menu">
             <LuX />

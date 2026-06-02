@@ -774,8 +774,8 @@ body{
     margin-top: auto;
     transition: all 0.25s ease;
 }
-.greet h1{
-    font-family: outfit;
+.greet h2{
+    font-family: outfit,sans-serif;
 }
 .nav button:hover{
     background: rgba(255, 255, 255, 0.13);
@@ -1315,4 +1315,19 @@ body{
   color: #000000;
   border: none;
   border-radius: 13px;
+}
+.board-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.board-top h3{
+  color: rgb(187, 185, 185);
+}
+.board-top span{
+  size: 0.2rem;
+  padding: 4px 13px;
+  text-align: center;
+  border-radius: 12px;
 }
