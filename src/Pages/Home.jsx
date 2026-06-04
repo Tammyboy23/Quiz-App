@@ -1,6 +1,6 @@
 import { AiFillFire } from "react-icons/ai";
 import Top from "./top";
-import { FaChartLine } from "react-icons/fa";
+import { FaChartLine, FaTrophy } from "react-icons/fa";
 import { FaClockRotateLeft } from "react-icons/fa6";
 
 function Home(){
@@ -32,7 +32,15 @@ function Home(){
                 }}><FaClockRotateLeft size="20" color="hsl(150, 100%, 47%)"/> </span></div>
                 <h1>10s</h1>
             </div>
-            <div className="board"></div>
+            <div className="board">
+                <div className="board-top">
+                    <h3>Rankings</h3>
+                    <span style={{
+                        background: '#faf9d1',
+                    }}><FaTrophy  color="orange"/></span>
+                </div>
+                <h1>#1</h1>
+            </div>
         </div>
         </div>
         </>

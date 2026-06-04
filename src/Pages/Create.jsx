@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Top from "./top";
+import { FaLaptop } from "react-icons/fa";
 
 function Create(){
     const [mode, setmode] = useState("");
@@ -25,7 +26,9 @@ function Create(){
                 <button onClick={() => setmode("")} className="back">Back</button>
                 {mode === "Text" ? (
                     <div className="written">
-
+                    <h3>Written Mode</h3>
+                    <input type="text" placeholder="Enter subject, topics ...." />
+                    <button>Create <FaLaptop /></button>
                     </div>
                 ): (
                     <div className="pd">
