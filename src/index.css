@@ -21,18 +21,19 @@
 body{
     background: var(--bg);
     color: var(--font);
+    min-height: 100vh;
 }
 .app{
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
-    margin: 100px auto;
-    padding: 36px 40px;
-    width: 100%;
-    max-width: 500px;
+    margin: 32px auto;
+    padding: 28px 24px;
+    width: min(100%, 980px);
+    max-width: 980px;
     background: var(--surface);
-    border: 0.005rem solid var(--muted);
-    border-radius: 15px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
     transition: 0.5s ease;
 }
 
@@ -62,10 +63,34 @@ body{
     border-radius: 20px;
     padding: 40px 50px;
 }
+@media (min-width: 1024px) {
+  .app {
+    margin: 28px auto;
+    padding: 40px 48px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .buttons button {
+    min-height: 62px;
+    text-align: left;
+  }
+
+  .opening,
+  .screen {
+    padding: 18px 8px;
+  }
+}
+
 @media(max-width: 450px){
   .app{
-    max-width: 200px;
-    margin: 50px auto;
+    max-width: 100%;
+    margin: 16px auto;
+    padding: 18px;
   }
 }
 .buttons{
@@ -916,15 +941,12 @@ body{
   flex-direction: column;
   gap: 10px;
     min-height: 160px;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgb(39, 39, 39);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
     padding: 24px;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
     font-family: outfit, sans-serif;
-}
-.board span{
-  font-size: 2.3rem;
 }
 .board:hover{
     border-color: rgba(108, 99, 255, 0.35);
@@ -1325,8 +1347,7 @@ body{
   color: rgb(187, 185, 185);
 }
 .board-top span{
-  size: 0.2rem;
-  padding: 4px 13px;
+  padding: 10px;
   text-align: center;
   align-items: center;
   border-radius: 12px;
