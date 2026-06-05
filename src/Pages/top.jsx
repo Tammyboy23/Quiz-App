@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 function Top() {
   const [loggedIn] = useState(localStorage.getItem("islogedin") === "true");
   const avatar = localStorage.getItem("avatar");
+  const user = localStorage.getItem("username");
 
   return (
     <div className="tops">
-      <div className="title">
-        <span className="icon">🔍</span>
-        <input type="search" placeholder="Search quizzes or topics..." />
-      </div>
+      <div className="greet">
+            <h2>Welcome {user || "Guest"} 👋 </h2>
+        </div>
 
       <div className="side">
         {loggedIn ? (

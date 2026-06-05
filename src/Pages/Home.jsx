@@ -4,15 +4,15 @@ import { FaChartLine, FaTrophy } from "react-icons/fa";
 import { FaClockRotateLeft } from "react-icons/fa6";
 
 function Home(){
-    const user = localStorage.getItem("username");
     const average = Number(localStorage.getItem("average") || 0);
     return(
         <>
         <Top/>
         <div className="home">
-        <div className="greet">
-            <h2>Welcome {user || "Guest"} 👋 </h2>
-        </div>
+        <div className="title">
+        <span className="icon">🔍</span>
+        <input type="search" placeholder="Search quizzes or topics..." />
+      </div>
         <div className="dashboards">
             <div className="board">
                 <div className="board-top"><h3>Average</h3><span style={{
