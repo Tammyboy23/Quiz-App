@@ -704,8 +704,24 @@ body{
     gap: 10px;
     transition: background 0.25s ease, color 0.25s ease;
 }
+.list-a{
+  text-decoration: none;
+    color: var(--font);
+    font-size: 1.05rem;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-family: outfit, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
 .list a:hover{
     background: rgba(108, 99, 255, 0.12);
+    color: var(--accent);
+}
+.list-active{
+   background: rgba(108, 99, 255, 0.12);
     color: var(--accent);
 }
 .content{
@@ -1089,8 +1105,7 @@ body{
 
 /* ── Profile page ── */
 .profile-page {
-  max-width: 560px;
-  margin: 32px auto 0;
+  margin: 0;
   padding: 0 4px;
 }
 .profile-title {

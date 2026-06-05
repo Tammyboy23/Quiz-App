@@ -1,7 +1,7 @@
 import { AiFillFire } from "react-icons/ai";
 import Top from "./top";
 import { FaChartLine, FaTrophy } from "react-icons/fa";
-import { FaClockRotateLeft } from "react-icons/fa6";
+import { FaClockRotateLeft , FaMagnifyingGlass } from "react-icons/fa6";
 
 function Home(){
     const average = Number(localStorage.getItem("average") || 0);
@@ -10,7 +10,7 @@ function Home(){
         <Top/>
         <div className="home">
         <div className="title">
-        <span className="icon">🔍</span>
+        <span className="icon">< FaMagnifyingGlass /></span>
         <input type="search" placeholder="Search quizzes or topics..." />
       </div>
         <div className="dashboards">

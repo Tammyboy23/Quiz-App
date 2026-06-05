@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {  FaUser, FaQq } from "react-icons/fa";
 import { LuCompass,  LuX, LuMenu , LuFilePenLine} from "react-icons/lu";
 import { MdDashboard } from "react-icons/md";
 import { AiOutlineBulb } from "react-icons/ai";
-
+import { NavLink } from "react-router-dom";
 function NavBar({ hidden }) {
   const [open, setOpen] = useState(false);
   const drawerRef = useRef(null);
@@ -42,10 +42,10 @@ function NavBar({ hidden }) {
 
   const navLinks = (
     <div className="list">
-      <Link to="/" onClick={() => setOpen(false)}><MdDashboard /> Dashboard</Link>
-      <Link to="/explore" onClick={() => setOpen(false)}><LuCompass /> Explore</Link>
-      <Link to="/create" onClick={() => setOpen(false)}><LuFilePenLine /> Create Quiz</Link>
-      <Link to="/profile" onClick={() => setOpen(false)}><FaUser /> Profile</Link>
+      <NavLink to="/" onClick={() => setOpen(false)} className={ location.pathname ==='/' ? "list-active" : "list-a"}><MdDashboard /> Dashboard</ NavLink>
+      <NavLink to="/explore" onClick={() => setOpen(false)} className={ location.pathname ==='/explore' ? "list-active" : "list-a"}><LuCompass /> Explore</NavLink>
+      <NavLink to="/create" onClick={() => setOpen(false)} className={ location.pathname ==='/create' ? "list-active" : "list-a"}><LuFilePenLine /> Create Quiz</NavLink>
+      <NavLink to="/profile" onClick={() => setOpen(false)} className={ location.pathname ==='/profile' ? "list-active" : "list-a"}><FaUser /> Profile</NavLink>
     </div>
   );
 
