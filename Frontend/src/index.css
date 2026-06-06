@@ -1732,7 +1732,37 @@ height: 40px
 .written > button:active {
   transform: translateY(0);
 }
-
+.written label{
+  margin-top: 10px;
+  font-family: outfit, sans-serif;
+  color: rgb(124, 124, 124);
+}
+.written input[type=range] {
+  width: 100%;
+  background: transparent;
+  -webkit-appearance: none;
+}
+.written input[type=range]::-webkit-slider-runnable-track{
+ background: #282b35;
+ width: 100%;
+ height: 8px;
+ border-radius: 5px;
+}
+.written input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--accent2);
+  cursor: pointer;
+  margin-top: -6px;
+}
+.range{
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  font-family: outfit, sans-serif;
+}
 /* ── PDF mode ── */
 .pd {
   display: flex;
@@ -1756,6 +1786,14 @@ height: 40px
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.file-attached-note {
+  margin-top: 10px;
+  color: var(--accent2);
+  font-family: rubik, sans-serif;
+  font-size: 0.88rem;
+  text-align: right;
 }
 
 .file-upload-label {
@@ -1814,7 +1852,55 @@ height: 40px
   font-weight: 600;
   transition: background 0.2s, color 0.2s;
 }
+.pd input[type="text"] {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: #f0f0f0;
+  font-family: outfit, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  caret-color: var(--accent);
+}
 
+.pd input[type="text"]::placeholder {
+  color: #555568;
+}
+
+.pd input[type="text"]:hover {
+  border-color: rgba(108, 99, 255, 0.35);
+}
+
+.pd input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(108, 99, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+.pd input[type=range] {
+  width: 100%;
+  background: transparent;
+  -webkit-appearance: none;
+}
+.pd input[type=range]::-webkit-slider-runnable-track{
+ background: #282b35;
+ width: 100%;
+ height: 8px;
+ border-radius: 5px;
+}
+.pd input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--accent2);
+  cursor: pointer;
+  margin-top: -6px;
+}
 .browse-button:hover {
   background: var(--accent);
   color: #fff;
