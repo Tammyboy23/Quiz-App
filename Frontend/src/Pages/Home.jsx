@@ -51,7 +51,7 @@ function Home(){
                     }}><FaTrophy  size="20" color="orange"/></span>
                 </div>
                 <h1 style={{
-                    color: 'orange'
+                    color: 'orange',
                 }}>#1</h1>
             </div>
         </div>
