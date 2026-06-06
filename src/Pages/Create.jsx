@@ -1,12 +1,10 @@
 import { useState } from "react";
-import Top from "./top";
 import { FaLaptop } from "react-icons/fa";
 
 function Create(){
     const [mode, setmode] = useState("");
     return(
         <>
-        <Top />
         <div className="create">
             <div className="create-box">
         {mode === "" ? (

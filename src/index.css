@@ -830,6 +830,11 @@ body{
 .greet h2{
     font-family: outfit,sans-serif;
 }
+.greet p{
+  text-transform: capitalize;
+  font-family: outfit, sans-serif;
+  color: rgb(124, 124, 124);
+}
 .nav button:hover{
     background: rgba(255, 255, 255, 0.13);
 }
@@ -1079,7 +1084,8 @@ body{
 /* ── Mobile: show burger + drawer, hide sidebar ── */
 @media (max-width: 900px) {
   .burger-btn {
-    display: flex;
+    display: block;
+    position: fixed;
   }
   /* Keep overlay hidden by default; show only when drawer is opened via JS */
   .drawer-overlay {
@@ -1100,6 +1106,9 @@ body{
   }
   .quizy button{
     width: 70vw;
+  }
+  .greet{
+    margin-top: 20px;
   }
 }
 
@@ -1383,10 +1392,11 @@ body{
   letter-spacing: 0.02em;
 }
 .board-top span{
-  padding: 8px 10px;
+  padding: 10px;
+  justify-content: center;
   text-align: center;
   align-items: center;
-  border-radius: 999px;
+  border-radius: 14px;
   color: #ff9a9a;
   background: rgba(239, 68, 68, 0.12);
   border: 1px solid rgba(239, 68, 68, 0.18);

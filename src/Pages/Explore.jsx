@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { quizes } from "../Questions/quizes";
-import { LiaClipboardListSolid , LiaArrowRightSolid} from "react-icons/lia";
+import { LiaArrowRightSolid} from "react-icons/lia";
 import { LuFileStack } from "react-icons/lu";
-import Top from "./top";
 
 function Explore() {
 
   return (
     <>
-      <Top />
       <div className="explore">
         <div className="quizes">
           {quizes.map((quiz) => (
