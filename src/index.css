@@ -1391,11 +1391,14 @@ body{
   font-size: 1rem;
   letter-spacing: 0.02em;
 }
-.board-top span{
+
+.board-top span {
+  display: flex;             /* Enables flexbox */
+  align-items: center;       /* Centers items vertically */
+  justify-content: center;   /* Centers items horizontally */
+  gap: 8px;                  /* Adds space between the icon and text */
+  
   padding: 10px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
   border-radius: 14px;
   color: #ff9a9a;
   background: rgba(239, 68, 68, 0.12);
@@ -1403,6 +1406,7 @@ body{
   font-size: 0.88rem;
   font-weight: 600;
 }
+
 @media(max-width: 900px){
   .board{
     padding: 20px;
