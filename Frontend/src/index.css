@@ -1451,47 +1451,7 @@ body{
     font-family: outfit;
     font-size: 2.3rem;
 }
-.create-box{
-  display: flex;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  width: fit-content;
-  margin: 60px auto;
-  flex-direction: column;
-  border-radius: 12px;
-  font-family: outfit, sans-serif;  
-}
-.first{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 16px 24px;
-}
-.first select{
-  appearance: base-select;
-  padding: 10px;
-  background: rgb(46, 46, 46);
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-}
-.first select::picker-icon{
-  transition: 0.3s ease;
-}
-.first select:open::picker-icon{
-  rotate: 180deg;
-}
-.first select option{
-  border: 3px solid #ff0000;
-  border-radius: 12px;
-}
-.back{
-  padding: 10px;
-  font-size: 1.2rem;
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 13px;
-}
+
 .board-top{
   display: flex;
   flex-direction: row;
@@ -1554,4 +1514,382 @@ height: 40px
   font-size: 1.r1em;
   border: none;
   border-radius: 12px;
+}
+/** Create box styles */
+/* Create page styles */
+
+/* ── Outer wrapper ── */
+.create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  padding: 40px 20px;
+}
+
+/* ── Card ── */
+.create-box {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  background: linear-gradient(160deg, #1a1a24, #141418);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(108, 99, 255, 0.06);
+}
+
+/* ════ SCREEN 1 ════ */
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  animation: createFadeUp 0.32s ease both;
+}
+
+/* Gradient header band */
+.create-top {
+  padding: 36px 36px 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(108, 99, 255, 0.14) 0%,
+    rgba(156, 148, 255, 0.06) 60%,
+    transparent 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.create-top h1 {
+  font-family: outfit, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fff 30%, var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.create-top p {
+  font-family: rubik, sans-serif;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Mode picker area */
+.first > select {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 28px 36px 36px;
+  width: calc(100% - 72px);
+  padding: 14px 44px 14px 18px;
+  background-color: rgba(255, 255, 255, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237b7b8e' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: #c4c4d4;
+  font-family: outfit, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.first > select:hover {
+  border-color: rgba(108, 99, 255, 0.4);
+  background-color: rgba(108, 99, 255, 0.06);
+}
+
+.first > select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.18);
+}
+
+.first > select option {
+  background: #1a1a24;
+  color: #f0f0f0;
+}
+
+/* ════ SCREEN 2 ════ */
+.second {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 36px 36px;
+  animation: createFadeUp 0.32s ease both;
+}
+
+/* Back button */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  color: var(--muted);
+  font-family: outfit, sans-serif;
+  font-size: 0.85rem;
+  padding: 7px 14px;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.back:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* ── Written mode ── */
+.written {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.written h3 {
+  font-family: outfit, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.written > p,
+.written-sub {
+  font-family: rubik, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.written input[type="text"] {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  color: #f0f0f0;
+  font-family: outfit, sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  caret-color: var(--accent);
+}
+
+.written input[type="text"]::placeholder {
+  color: #555568;
+}
+
+.written input[type="text"]:hover {
+  border-color: rgba(108, 99, 255, 0.35);
+}
+
+.written input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(108, 99, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+
+.written > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  align-self: flex-end;
+  padding: 12px 28px;
+  background: var(--accent);
+  border: none;
+  border-radius: 13px;
+  color: #fff;
+  font-family: outfit, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.written > button:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+}
+
+.written > button:active {
+  transform: translateY(0);
+}
+
+/* ── PDF mode ── */
+.pd {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.pd h3 {
+  font-family: outfit, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+/* File upload zone */
+.file-upload-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload-label {
+  display: block;
+  width: 100%;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px dashed rgba(108, 99, 255, 0.3);
+  background: rgba(108, 99, 255, 0.04);
+  transition: border-color 0.2s, background 0.2s;
+  box-shadow: none;
+}
+
+.file-upload-label:hover {
+  border-color: rgba(108, 99, 255, 0.6);
+  background: rgba(108, 99, 255, 0.08);
+}
+
+.file-upload-label input[type="file"] {
+  display: none;
+}
+
+.file-upload-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 36px 24px;
+}
+
+.file-upload-label svg {
+  height: 40px;
+  fill: var(--accent2);
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.file-upload-design p {
+  font-family: rubik, sans-serif;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.browse-button {
+  margin-top: 4px;
+  background: rgba(108, 99, 255, 0.18);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  color: var(--accent2);
+  padding: 7px 20px;
+  border-radius: 10px;
+  font-family: outfit, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.browse-button:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* PDF create button */
+.pd > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  align-self: flex-end;
+  padding: 12px 28px;
+  background: var(--accent);
+  border: none;
+  border-radius: 13px;
+  color: #fff;
+  font-family: outfit, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.pd > button:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+}
+
+.pd > button:active {
+  transform: translateY(0);
+}
+
+/* ── Shared animation ── */
+@keyframes createFadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .create {
+    padding: 20px 16px;
+    align-items: flex-start;
+  }
+
+  .create-box {
+    border-radius: 18px;
+  }
+
+  .create-top {
+    padding: 24px 22px 20px;
+  }
+
+  .create-top h1 {
+    font-size: 1.6rem;
+  }
+
+  .first > select {
+    margin: 20px 22px 24px;
+    width: calc(100% - 44px);
+  }
+
+  .second {
+    padding: 22px 22px 28px;
+  }
+
+  .written h3,
+  .pd h3 {
+    font-size: 1.35rem;
+  }
+
+  .written > button,
+  .pd > button {
+    align-self: stretch;
+  }
 }
