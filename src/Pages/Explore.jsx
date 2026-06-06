@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import { quizes } from "../Questions/quizes";
-import { LiaArrowRightSolid} from "react-icons/lia";
+import { LiaArrowRightSolid } from "react-icons/lia";
 import { LuFileStack } from "react-icons/lu";
 
 function Explore() {
-
   return (
-    <>
-      <div className="explore">
+    <div className="explore">
       <div className="explore-header">
         <div className="explore-eyebrow">All Quizzes</div>
         <h1 className="explore-title">What do you want to test today?</h1>
@@ -46,7 +44,7 @@ function Explore() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
