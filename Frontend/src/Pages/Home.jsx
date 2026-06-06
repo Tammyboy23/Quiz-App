@@ -1,12 +1,17 @@
-import { AiFillFire } from "react-icons/ai";
+import {  AiFillFire } from "react-icons/ai";
 import Top from "./top";
-import { FaChartLine, FaTrophy } from "react-icons/fa";
-import { FaClockRotateLeft , FaMagnifyingGlass, FaStopwatch } from "react-icons/fa6";
+import {  FaChartLine, FaTrophy } from "react-icons/fa";
+import { FaMagnifyingGlass, FaStopwatch } from "react-icons/fa6";
+import { LuBell, LuBellDot } from "react-icons/lu";
+import { useState } from "react";
 
 function Home(){
     const average = Number(localStorage.getItem("average") || 0);
+    const [notication, setnotification] = useState([]);
     return(
         <>
+        <div className="notfication">{notication == 0 ? ( <LuBell  color="yellow" size={24}/>) : ( <LuBellDot  color="yellow" size={24}/> )}</div>
+       
         <Top/>
         <div className="home">
         <div className="title">
@@ -18,19 +23,25 @@ function Home(){
                 <div className="board-top"><h3>Average</h3><span style={{
                     background: 'hsl(205, 14%, 53%)',
                 }}><FaChartLine size="20" color="blue" /></span></div>
-                <h1>{average}%</h1>
+                <h1 style={{
+                    color: average > 80 ? 'green' : average > 50 ? 'yellow' :  average > 30 ? 'orange' : 'red',
+                }}>{average}%</h1>
             </div>
             <div className="board">
                 <div className="board-top"><h3>Streaks</h3> <span style={{
                     background: 'hsl(0, 12%, 48%)',
                 }}><AiFillFire  size="20" color="red"/></span></div>
-                <h1>2 Days</h1>
+                <h1 style={{
+                    color: 'red',
+                }}>2 Days</h1>
             </div>
             <div className="board">
                 <div className="board-top"><h3>Duration</h3><span style={{
                     background: 'hsl(120, 11%, 44%)',
                 }}><FaStopwatch size="20" color="hsl(150, 100%, 47%)"/> </span></div>
-                <h1>10s</h1>
+                <h1 style={{
+                    color: 'lightgreen'
+                }}>10s</h1>
             </div>
             <div className="board">
                 <div className="board-top">
@@ -39,7 +50,9 @@ function Home(){
                         background: '#91907b',
                     }}><FaTrophy  size="20" color="orange"/></span>
                 </div>
-                <h1>#1</h1>
+                <h1 style={{
+                    color: 'orange'
+                }}>#1</h1>
             </div>
         </div>
         </div>
