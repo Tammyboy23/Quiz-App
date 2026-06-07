@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { FaLaptop } from "react-icons/fa";
+import { FaCreativeCommonsBy, FaLaptop, FaPlane, FaQuestion } from "react-icons/fa";
+import { FaAmazon, FaPlaneArrival, FaPlaneCircleCheck } from "react-icons/fa6";
 import { LuArrowLeft } from "react-icons/lu";
 
 function Create(){
@@ -39,7 +40,7 @@ function Create(){
                     <div className="range">
                     <span>{number}</span><input type="range" min="1" max={200} value={number} onChange={(e) => setnumber(e.target.value)}/><span>200</span>
                     </div>
-                    <button>Create <FaLaptop /></button>
+                    <button>Create <FaPlaneArrival /></button>
                     </div>
                 ): (
                     <div className="pd">
@@ -64,7 +65,7 @@ function Create(){
                     <span>{number}</span><input type="range" min="1" max={200} value={number} onChange={(e) => setnumber(e.target.value)}/><span>200</span>
                     </div>
 {selectedFile && <p className="file-attached-note">Attached: {selectedFile.name}</p>}
-<button>Create <FaLaptop /></button>
+<button>Create <FaPlaneCircleCheck /></button>
                     </div>
                 )}
             </div>

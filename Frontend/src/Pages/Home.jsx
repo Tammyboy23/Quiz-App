@@ -8,9 +8,15 @@ import { useState } from "react";
 function Home(){
     const average = Number(localStorage.getItem("average") || 0);
     const [notication, setnotification] = useState([]);
+    const [open, setopen] = useState(false)
     return(
         <>
-        <div className="notfication">{notication == 0 ? ( <LuBell  color="yellow" size={24}/>) : ( <LuBellDot  color="yellow" size={24}/> )}</div>
+        <div className="notfication"><button onClick={() => setopen(!open)}>{notication == 0 ? ( <LuBell  color="yellow" size={24}/>) : ( <LuBellDot  color="yellow" size={24}/> )}</button>
+        {open ? (<div className="notifications">
+            <h3>You have {notication.length} Notfications</h3>
+            <div className="line"></div>
+        </div>) : (null)}
+        </div>
        
         <Top/>
         <div className="home">
