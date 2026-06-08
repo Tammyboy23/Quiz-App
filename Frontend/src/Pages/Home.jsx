@@ -37,17 +37,13 @@ function Home(){
                 <div className="board-top"><h3>Streaks</h3> <span style={{
                     background: 'hsl(0, 12%, 48%)',
                 }}><AiFillFire  size="20" color="red"/></span></div>
-                <h1 style={{
-                    color: 'red',
-                }}>2 Days</h1>
+                <h1>2 Days</h1>
             </div>
             <div className="board">
                 <div className="board-top"><h3>Duration</h3><span style={{
                     background: 'hsl(120, 11%, 44%)',
                 }}><FaStopwatch size="20" color="hsl(150, 100%, 47%)"/> </span></div>
-                <h1 style={{
-                    color: 'lightgreen'
-                }}>10s</h1>
+                <h1>10s</h1>
             </div>
             <div className="board">
                 <div className="board-top">
@@ -56,9 +52,7 @@ function Home(){
                         background: '#91907b',
                     }}><FaTrophy  size="20" color="orange"/></span>
                 </div>
-                <h1 style={{
-                    color: 'orange',
-                }}>#1</h1>
+                <h1>#1</h1>
             </div>
         </div>
         </div>
