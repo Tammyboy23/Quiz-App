@@ -1841,6 +1841,11 @@ body{
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 900px) {
+  .profile-page{
+    margin: 100px;
+  }
+}
 /* Mobile */
 @media (max-width: 600px) {
   .profile-page{
